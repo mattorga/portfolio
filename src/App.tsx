@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 const App = () => {
   return (
     <div className="min-h-screen bg-background text-foreground p-2 text-glow flex items-center justify-center">
-      <div className="max-w-4xl w-full mx-auto px-4 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-3">
+      <div className="max-w-5xl w-full mx-auto px-4 grid grid-cols-[220px_1fr] gap-3">
         {/* Left Sidebar */}
         <aside className="space-y-2">
           {/* Header */}
