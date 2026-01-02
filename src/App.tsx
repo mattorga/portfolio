@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from "lucide-react"
+import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiPython, SiReact, SiNextdotjs, SiTailwindcss, SiAmazon } from "react-icons/si"
 
 const App = () => {
   return (
@@ -8,8 +9,12 @@ const App = () => {
         <aside className="space-y-4">
           {/* Header */}
           <div className="space-y-1">
-            <h1 className="text-xl font-bold tracking-tight">Matthew</h1>
-            <h1 className="text-xl font-bold tracking-tight">Orga</h1>
+            <h1 className="text-[#FC9867] text-2xl leading-relaxed origin-left" style={{ fontFamily: "'Press Start 2P', monospace", transform: 'scaleX(1.5)' }}>
+              MATTHEW
+            </h1>
+            <h1 className="text-[#FC9867] text-2xl leading-relaxed origin-left" style={{ fontFamily: "'Press Start 2P', monospace", transform: 'scaleX(1.5)' }}>
+              ORGA
+            </h1>
           </div>
 
           {/* Experience Section */}
@@ -19,17 +24,17 @@ const App = () => {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between items-start hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
                 <span className="flex-1">Fullstack Developer</span>
-                <span className="text-right">@ SupervAIse</span>
+                <span className="text-right text-[#FC9867]">@ SupervAIse</span>
               </div>
 
               <div className="flex justify-between items-start hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
                 <span className="flex-1">Fullstack Developer Intern</span>
-                <span className="text-right">@ ISI</span>
+                <span className="text-right text-[#FC9867]">@ ISI</span>
               </div>
 
               <div className="flex justify-between items-start hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
                 <span className="flex-1">Committee Officer</span>
-                <span className="text-right">@ DLSU ACCESS</span>
+                <span className="text-right text-[#FC9867]">@ DLSU ACCESS</span>
               </div>
             </div>
 
@@ -45,7 +50,7 @@ const App = () => {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between items-start hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
                 <span className="flex-1">BS Computer Engineering</span>
-                <span className="text-right">@ DLSU</span>
+                <span className="text-right text-[#FC9867]">@ DLSU</span>
               </div>
 
               <div className="pl-4 space-y-0.5 text-xs text-muted-foreground">
@@ -89,33 +94,42 @@ const App = () => {
           <fieldset className="border border-border p-3 space-y-2 relative">
             <legend className="text-xs text-muted-foreground px-2">[Tools]</legend>
 
-            <div className="grid grid-cols-3 gap-x-3 gap-y-1.5 text-sm">
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                HTML
+            <div className="grid grid-cols-3 gap-x-2 gap-y-1.5 text-xs">
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiHtml5 className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">HTML</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                TypeScript
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiTypescript className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">TypeScript</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                NextJS
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiNextdotjs className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">NextJS</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                CSS
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiCss3 className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">CSS</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                Python
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiPython className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">Python</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                TailwindCSS
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiTailwindcss className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">Tailwind</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                JavaScript
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiJavascript className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">JavaScript</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                React
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiReact className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">React</span>
               </div>
-              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
-                AWS
+              <div className="hover:bg-accent hover:text-accent-foreground transition-colors px-1.5 py-1 -mx-1.5 cursor-pointer flex items-center gap-1.5">
+                <SiAmazon className="w-3.5 h-3.5 flex-shrink-0" />
+                <span className="truncate">AWS</span>
               </div>
             </div>
 
@@ -131,13 +145,13 @@ const App = () => {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between items-start hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
                 <span className="flex-1">Certified AI Practitioner</span>
-                <span className="text-right text-xs">AWS</span>
+                <span className="text-right text-xs text-[#FC9867]">AWS</span>
               </div>
 
               <div className="space-y-0.5 hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer">
                 <div className="flex-1">Building LLM Applications</div>
                 <div className="flex-1">with Prompt Engineering</div>
-                <div className="text-right text-xs">NVIDIA</div>
+                <div className="text-right text-xs text-[#FC9867]">NVIDIA</div>
               </div>
             </div>
 
