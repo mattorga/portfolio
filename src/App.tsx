@@ -75,7 +75,9 @@ const App = () => {
 
   return (
     <SelectionProvider>
-      <div className="min-h-screen bg-background text-foreground p-4 text-glow flex items-center justify-center">
+      <div className={`min-h-screen text-foreground p-4 text-glow flex items-center justify-center transition-colors duration-700 ${
+        startupPhase >= 2 ? 'bg-background' : 'bg-black'
+      }`}>
         <div className="max-w-6xl w-full mx-auto px-8 grid grid-cols-[320px_1fr] gap-6">
           {/* Left Sidebar */}
           <aside className="space-y-4">
