@@ -85,7 +85,7 @@ const App = () => {
               startupPhase === 1 ? "startup-flicker" :
               "visible-startup"
             }>
-              <Header />
+              <Header startupPhase={startupPhase} />
             </div>
 
             {/* Components appear one by one */}
