@@ -1,23 +1,33 @@
 import ScrollableSection from '../ui/ScrollableSection'
+import { useSelection } from '../../context/SelectionContext'
 
 const experiences = [
-  { id: 1, role: 'Fullstack Developer', company: '@ SupervAIse' },
-  { id: 2, role: 'Fullstack Developer Intern', company: '@ ISI' },
-  { id: 3, role: 'Committee Officer', company: '@ DLSU ACCESS' },
+  { id: 1, role: 'Fullstack Developer', company: 'Supervaise', alias:'Supervaise'},
+  { id: 2, role: 'Fullstack Developer Intern', company: 'Intelligent Systems Innovation Inc.', alias:'ISI'},
+  { id: 3, role: 'Committee Officer', company: 'DLSU Association of Computer Engineering Students', alias: 'DLSU ACCESS' },
 ]
 
 const Experience = () => {
+  const { selectedItem, setSelectedItem } = useSelection()
+
+  const isActive = selectedItem?.section === 'Experience'
+
   return (
-    <ScrollableSection title="Experience" totalPages={experiences.length}>
-      {experiences.map((exp) => (
-        <div
-          key={exp.id}
-          className="flex justify-between items-start hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer snap-start"
-        >
-          <span className="flex-1">{exp.role}</span>
-          <span className="text-right text-[#FC9867]">{exp.company}</span>
-        </div>
-      ))}
+    <ScrollableSection title="Experience" totalPages={experiences.length} isActive={isActive}>
+      {experiences.map((exp) => {
+        const isSelected = isActive && selectedItem?.data?.id === exp.id
+
+        return (
+          <div
+            key={exp.id}
+            onClick={() => setSelectedItem({ section: 'Experience', data: exp })}
+            className={`flex justify-between items-start hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer snap-start group ${isSelected ? 'bg-accent text-accent-foreground' : ''}`}
+          >
+            <span className="flex-1">{exp.role}</span>
+            <span className={`text-right text-[#FC9867] transition-all ${isSelected ? '[-webkit-text-stroke:0.5px_#000000]' : 'group-hover:[-webkit-text-stroke:0.5px_#000000]'}`}>{exp.alias}</span>
+          </div>
+        )
+      })}
     </ScrollableSection>
   )
 }
