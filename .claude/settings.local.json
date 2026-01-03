@@ -4,7 +4,8 @@
       "mcp__Framelink_Figma_MCP__get_figma_data",
       "Bash(cp:*)",
       "Bash(npm run build:*)",
-      "Bash(npm install react-icons)"
+      "Bash(npm install react-icons)",
+      "Bash(npm run dev:*)"
     ]
   }
 }

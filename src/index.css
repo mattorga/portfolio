@@ -148,6 +148,40 @@
   }
 }
 
+/* Startup animation - dramatic flickering for boot sequence */
+@keyframes startup-flicker {
+  0%, 100% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90%, 100% {
+    opacity: 1;
+  }
+}
+
 /* Reduced grain animation intensity */
 @keyframes grain {
   0%,
@@ -247,5 +281,19 @@
 @layer utilities {
   .text-glow {
     text-shadow: 0 0 1px currentColor, 0 0 2px currentColor;
+  }
+
+  /* Startup animation utilities */
+  .startup-flicker {
+    animation: startup-flicker 2s ease-in-out;
+  }
+
+  .hidden-startup {
+    opacity: 0;
+  }
+
+  .visible-startup {
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
   }
 }

@@ -16,7 +16,10 @@ interface SelectionContextType {
 const SelectionContext = createContext<SelectionContextType | undefined>(undefined)
 
 export const SelectionProvider = ({ children }: { children: ReactNode }) => {
-  const [selectedItem, setSelectedItem] = useState<SelectedItem | null>(null)
+  const [selectedItem, setSelectedItem] = useState<SelectedItem | null>({
+    section: 'About',
+    data: {}
+  })
 
   return (
     <SelectionContext.Provider value={{ selectedItem, setSelectedItem }}>
