@@ -1,7 +1,7 @@
 import ScrollableSection from '../ui/ScrollableSection'
 import { SiReact, SiTypescript, SiPython } from 'react-icons/si'
+import { useSelection } from '../../context/SelectionContext'
 
-// Define your projects data
 const projects = [
   {
     id: 1,
@@ -31,27 +31,36 @@ const projects = [
 ]
 
 const Projects = () => {
-  return (
-    <ScrollableSection title="Projects" totalPages={projects.length}>
-      {projects.map((project) => (
-        <div
-          key={project.id}
-          className="flex justify-between items-center gap-3 hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer snap-start"
-        >
-          <span className="flex-1 truncate">{project.name}</span>
+  const { selectedItem, setSelectedItem } = useSelection()
 
-          {/* Tech icons container - fixed width to reserve space */}
-          <div className="flex items-center gap-1 flex-shrink-0 min-w-[60px]">
-            {project.techStack.length > 0 ? (
-              project.techStack.map((Icon, idx) => (
-                <span key={idx} className="text-xs">{Icon}</span>
-              ))
-            ) : (
-              <span className="text-xs text-muted-foreground">Icons</span>
-            )}
+  const isActive = selectedItem?.section === 'Projects'
+
+  return (
+    <ScrollableSection title="Projects" totalPages={projects.length} isActive={isActive}>
+      {projects.map((project) => {
+        const isSelected = isActive && selectedItem?.data?.id === project.id
+
+        return (
+          <div
+            key={project.id}
+            onClick={() => setSelectedItem({ section: 'Projects', data: project })}
+            className={`flex justify-between items-center gap-3 hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer snap-start ${isSelected ? 'bg-accent text-accent-foreground' : ''}`}
+          >
+            <span className="flex-1 truncate">{project.name}</span>
+
+            {/* Tech icons container - fixed width to reserve space */}
+            <div className="flex items-center gap-1 flex-shrink-0 min-w-[60px]">
+              {project.techStack.length > 0 ? (
+                project.techStack.map((Icon, idx) => (
+                  <span key={idx} className="text-xs">{Icon}</span>
+                ))
+              ) : (
+                <span className="text-xs text-muted-foreground">Icons</span>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        )
+      })}
     </ScrollableSection>
   )
 }
