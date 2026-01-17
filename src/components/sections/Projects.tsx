@@ -35,8 +35,13 @@ const Projects = () => {
 
   const isActive = selectedItem?.section === 'Projects'
 
+  // Calculate current page based on selected item
+  const currentPage = isActive && selectedItem?.data?.id
+    ? projects.findIndex(proj => proj.id === selectedItem.data.id) + 1
+    : 1
+
   return (
-    <ScrollableSection title="Projects" totalPages={projects.length} isActive={isActive}>
+    <ScrollableSection title="Projects" currentPage={currentPage} totalPages={projects.length} isActive={isActive}>
       {projects.map((project) => {
         const isSelected = isActive && selectedItem?.data?.id === project.id
 

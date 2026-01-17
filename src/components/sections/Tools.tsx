@@ -20,8 +20,13 @@ const Tools = () => {
 
   const isActive = selectedItem?.section === 'Tools'
 
+  // Calculate current page based on selected item
+  const currentPage = isActive && selectedItem?.data?.id
+    ? tools.findIndex(tool => tool.id === selectedItem.data.id) + 1
+    : 1
+
   return (
-    <ScrollableSection title="Tools" totalPages={tools.length} isActive={isActive}>
+    <ScrollableSection title="Tools" currentPage={currentPage} totalPages={tools.length} isActive={isActive}>
       <div className="grid grid-cols-3 gap-x-2 gap-y-1.5 text-xs">
         {tools.map((tool) => {
           const Icon = tool.icon

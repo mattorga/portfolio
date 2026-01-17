@@ -29,8 +29,13 @@ const Certifications = () => {
 
   const isActive = selectedItem?.section === 'Certifications'
 
+  // Calculate current page based on selected item
+  const currentPage = isActive && selectedItem?.data?.id
+    ? certifications.findIndex(cert => cert.id === selectedItem.data.id) + 1
+    : 1
+
   return (
-    <ScrollableSection title="Certifications" totalPages={certifications.length} isActive={isActive}>
+    <ScrollableSection title="Certifications" currentPage={currentPage} totalPages={certifications.length} isActive={isActive}>
       {certifications.map((cert) => {
         const isSelected = isActive && selectedItem?.data?.id === cert.id
 

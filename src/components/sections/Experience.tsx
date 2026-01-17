@@ -12,8 +12,13 @@ const Experience = () => {
 
   const isActive = selectedItem?.section === 'Experience'
 
+  // Calculate current page based on selected item
+  const currentPage = isActive && selectedItem?.data?.id
+    ? experiences.findIndex(exp => exp.id === selectedItem.data.id) + 1
+    : 1
+
   return (
-    <ScrollableSection title="Experience" totalPages={experiences.length} isActive={isActive}>
+    <ScrollableSection title="Experience" currentPage={currentPage} totalPages={experiences.length} isActive={isActive}>
       {experiences.map((exp) => {
         const isSelected = isActive && selectedItem?.data?.id === exp.id
 

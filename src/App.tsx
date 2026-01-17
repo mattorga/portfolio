@@ -32,7 +32,7 @@ const App = () => {
       setStartupPhase(2)
     }, 2500))
 
-    // Components appear one by one in a random-seeming order after name solidifies
+    // Components appear one by one in a random-seeming order after the name solidifies
     // Tools appears first
     timers.push(setTimeout(() => {
       setVisibleComponents(prev => new Set(prev).add('tools'))

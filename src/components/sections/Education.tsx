@@ -18,8 +18,13 @@ const Education = () => {
 
   const isActive = selectedItem?.section === 'Education'
 
+  // Calculate current page based on selected item
+  const currentPage = isActive && selectedItem?.data?.id
+    ? educationList.findIndex(edu => edu.id === selectedItem.data.id) + 1
+    : 1
+
   return (
-    <ScrollableSection title="Education" totalPages={educationList.length} isActive={isActive}>
+    <ScrollableSection title="Education" currentPage={currentPage} totalPages={educationList.length} isActive={isActive}>
       {educationList.map((edu) => {
         const isSelected = isActive && selectedItem?.data?.id === edu.id
 
