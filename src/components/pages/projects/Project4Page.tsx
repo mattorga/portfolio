@@ -1,90 +1,118 @@
-import { SiTypescript, SiPython, SiReact } from 'react-icons/si'
+import { SiPython, SiOpencv, SiGithub } from 'react-icons/si'
+import { MdOutlineVisibility } from 'react-icons/md'
+import { TbYoga } from 'react-icons/tb'
 
 const Project4Page = () => {
   return (
     <div className="space-y-6">
-      {/* Compact header */}
-      <div>
-        <h3 className="text-xl font-bold">Project 4</h3>
-        <p className="text-coral text-sm mt-0.5">Real-time Collaboration Tool</p>
-      </div>
-
-      {/* Feature grid */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Features</h4>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
-            <p className="text-xs font-medium">Live Cursors</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              See collaborators' cursors in real-time
-            </p>
-          </div>
-          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
-            <p className="text-xs font-medium">Presence</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Know who's viewing the document
-            </p>
-          </div>
-          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
-            <p className="text-xs font-medium">Comments</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Thread-based discussions
-            </p>
-          </div>
-          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
-            <p className="text-xs font-medium">Version History</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Track all document changes
-            </p>
-          </div>
+      {/* Header - Rank 3 */}
+      <div className="space-y-3">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <span className="px-2 py-0.5 bg-accent/10 rounded">Team Lead</span>
+          <span className="px-2 py-0.5 bg-accent/10 rounded">Developer</span>
+          <span>2023</span>
+        </div>
+        <h3 className="text-2xl font-bold leading-tight">
+          Exercise Pose Identifier and Rep Counter
+        </h3>
+        <p className="text-sm text-coral">Real-time Fitness Tracking</p>
+        <div className="flex gap-3">
+          <a href="#" className="flex items-center gap-2 text-sm text-accent hover:underline">
+            <SiGithub className="w-4 h-4" />
+            View Code
+          </a>
         </div>
       </div>
 
-      {/* Architecture overview */}
+      {/* Description - Rank 2 */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Architecture</h4>
+        <h4 className="text-base font-semibold text-accent">About</h4>
+        <p className="text-sm text-muted-foreground">
+          A real-time exercise tracking application using MediaPipe for human pose estimation.
+          Developed a custom algorithm to identify exercises by calculating joint angles in a
+          particular instance. The GUI displays exercise name and rep counts in real-time.
+        </p>
+      </div>
+
+      {/* Architecture - Rank 5 */}
+      <div className="space-y-2">
+        <h4 className="text-base font-semibold text-accent">Architecture</h4>
         <div className="space-y-2 text-xs text-muted-foreground">
           <div className="flex items-start gap-2">
-            <span className="font-mono text-coral">Frontend:</span>
-            <span>React + TypeScript with Yjs for CRDT-based sync</span>
+            <span className="font-mono text-coral min-w-[80px]">Input:</span>
+            <span>Real-time video stream from webcam</span>
           </div>
           <div className="flex items-start gap-2">
-            <span className="font-mono text-coral">Backend:</span>
-            <span>Python WebSocket server with Redis pub/sub</span>
+            <span className="font-mono text-coral min-w-[80px]">Detection:</span>
+            <span>MediaPipe Pose for 33-point body landmark extraction</span>
           </div>
           <div className="flex items-start gap-2">
-            <span className="font-mono text-coral">Database:</span>
-            <span>PostgreSQL for persistence, Redis for session state</span>
+            <span className="font-mono text-coral min-w-[80px]">Algorithm:</span>
+            <span>Joint angle calculation (shoulder, elbow, hip, knee) for pose matching</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="font-mono text-coral min-w-[80px]">Tracking:</span>
+            <span>State machine to detect rep transitions (up/down positions)</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="font-mono text-coral min-w-[80px]">Output:</span>
+            <span>GUI overlay with exercise name, rep count, and joint angles</span>
           </div>
         </div>
       </div>
 
-      {/* Tech stack simple list */}
+      {/* Features */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Stack</h4>
-        <div className="flex gap-4 text-xs">
-          <div className="flex items-center gap-1.5">
-            <SiReact className="w-4 h-4 text-cyan-400" />
-            <span className="text-muted-foreground">React</span>
+        <h4 className="text-base font-semibold text-accent">Features</h4>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">Exercise Detection</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Identifies exercise type from pose
+            </p>
           </div>
-          <div className="flex items-center gap-1.5">
-            <SiTypescript className="w-4 h-4 text-blue-400" />
-            <span className="text-muted-foreground">TypeScript</span>
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">Rep Counter</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Automatic repetition counting
+            </p>
           </div>
-          <div className="flex items-center gap-1.5">
-            <SiPython className="w-4 h-4 text-yellow-400" />
-            <span className="text-muted-foreground">Python</span>
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">Joint Angles</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Real-time angle display
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">GUI Interface</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Clean overlay with stats
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Learning outcome */}
-      <div className="mt-4 p-3 bg-gradient-to-r from-accent/10 to-transparent rounded">
-        <p className="text-xs font-medium text-accent mb-1">Key Learning</p>
-        <p className="text-xs text-muted-foreground">
-          Deep dive into conflict-free replicated data types (CRDTs) and operational
-          transformation algorithms for real-time collaboration.
-        </p>
+      {/* Tech Stack - Rank 1 */}
+      <div className="space-y-2">
+        <h4 className="text-base font-semibold text-accent">Tech Stack</h4>
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-2">
+            <SiPython className="w-5 h-5 text-yellow-500" />
+            <span className="text-sm">Python</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <SiOpencv className="w-5 h-5 text-green-500" />
+            <span className="text-sm">OpenCV</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <TbYoga className="w-5 h-5 text-blue-400" />
+            <span className="text-sm">MediaPipe</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <MdOutlineVisibility className="w-5 h-5 text-purple-400" />
+            <span className="text-sm">Computer Vision</span>
+          </div>
+        </div>
       </div>
     </div>
   )

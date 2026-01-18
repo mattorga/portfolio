@@ -283,6 +283,15 @@
     text-shadow: 0 0 1px currentColor, 0 0 2px currentColor;
   }
 
+  /* Hide scrollbar while keeping scroll functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
   /* Startup animation utilities */
   .startup-flicker {
     animation: startup-flicker 2s ease-in-out;

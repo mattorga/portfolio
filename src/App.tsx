@@ -75,7 +75,7 @@ const App = () => {
 
   return (
     <SelectionProvider>
-      <div className={`min-h-screen text-foreground p-4 text-glow flex items-center justify-center transition-colors duration-700 ${
+      <div className={`h-screen text-foreground p-4 text-glow flex items-center justify-center transition-colors duration-700 ${
         startupPhase >= 2 ? 'bg-background' : 'bg-black'
       }`}>
         <div className="max-w-6xl w-full mx-auto px-8 grid grid-cols-[320px_1fr] gap-6">
@@ -117,10 +117,12 @@ const App = () => {
           </aside>
 
           {/* Main Content Area - appears in the sequence */}
-          <main className={`border border-border min-h-[500px] p-6 ${
+          <main className={`relative border border-border ${
             visibleComponents.has('main') ? "visible-startup" : "hidden-startup"
           }`}>
-            <DetailView />
+            <div className="absolute inset-0 overflow-hidden">
+              <DetailView />
+            </div>
           </main>
         </div>
       </div>

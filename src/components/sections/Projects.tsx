@@ -5,27 +5,27 @@ import { useSelection } from '../../context/SelectionContext'
 const projects = [
   {
     id: 1,
-    name: 'Project 1',
+    name: 'Markerless Gait Analysis using 3D Human Pose Estimation',
     techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
   },
   {
     id: 2,
-    name: 'Project 2',
+    name: 'Modified VGG-19 for CIFAR10 Dataset',
     techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
   },
   {
     id: 3,
-    name: 'Project 3',
+    name: 'Pathological Gait Classification',
     techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
   },
   {
     id: 4,
-    name: 'Project 4',
+    name: 'Exercise Pose Identifier and Rep Counter',
     techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
   },
   {
     id: 5,
-    name: 'Project 5',
+    name: 'On-campus Electronic Equipment Borrowing System',
     techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
   },
 ]
@@ -51,7 +51,7 @@ const Projects = () => {
             onClick={() => setSelectedItem({ section: 'Projects', data: project })}
             className={`flex justify-between items-center gap-3 hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer snap-start ${isSelected ? 'bg-accent text-accent-foreground' : ''}`}
           >
-            <span className="flex-1 truncate">{project.name}</span>
+            <span className="flex-1 break-words">{project.name}</span>
 
             {/* Tech icons container - fixed width to reserve space */}
             <div className="flex items-center gap-1 flex-shrink-0 min-w-[60px]">

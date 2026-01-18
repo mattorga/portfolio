@@ -1,3 +1,5 @@
+import { Calendar, Users, Mic, ClipboardList } from 'lucide-react'
+
 const DLSUAccessPage = () => {
   return (
     <div className="space-y-6">
@@ -7,7 +9,7 @@ const DLSUAccessPage = () => {
           <h3 className="text-2xl font-bold">Committee Officer</h3>
           <p className="text-lg text-coral">DLSU Association of Computer Engineering Students</p>
         </div>
-        <p className="text-sm text-muted-foreground">August 2023 - May 2024</p>
+        <p className="text-sm text-muted-foreground">January 2022 - May 2024</p>
       </div>
 
       {/* Overview */}
@@ -20,18 +22,14 @@ const DLSUAccessPage = () => {
       </div>
 
       {/* Key Achievements / Impact */}
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 gap-3">
         <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-2xl font-bold text-accent">15+</p>
+          <p className="text-2xl font-bold text-accent">4+</p>
           <p className="text-xs text-muted-foreground mt-1">Events Organized</p>
         </div>
         <div className="text-center p-3 bg-accent/5 rounded">
           <p className="text-2xl font-bold text-accent">200+</p>
           <p className="text-xs text-muted-foreground mt-1">Students Reached</p>
-        </div>
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-2xl font-bold text-accent">5</p>
-          <p className="text-xs text-muted-foreground mt-1">Partner Companies</p>
         </div>
       </div>
 
@@ -42,51 +40,44 @@ const DLSUAccessPage = () => {
           <div className="flex gap-3 items-center">
             <span className="text-xs text-orange-400">➤</span>
             <p className="text-sm text-muted-foreground flex-1">
-              Coordinated technical workshops and seminars for 100+ students
+              Coordinated technical workshops and seminars for 100+ students (Onsite and Online)
             </p>
           </div>
           <div className="flex gap-3 items-center">
             <span className="text-xs text-orange-400">➤</span>
             <p className="text-sm text-muted-foreground flex-1">
-              Managed event logistics and collaborated with industry partners
+              Managed and led whole event flow (ideation, logistics, execution)
             </p>
           </div>
           <div className="flex gap-3 items-center">
             <span className="text-xs text-orange-400">➤</span>
             <p className="text-sm text-muted-foreground flex-1">
-              Developed promotional materials and maintained social media presence
+              Contacted <em>prospects</em>/speakers from external partner companies
             </p>
           </div>
         </div>
       </div>
 
-      {/* Projects */}
+      {/* Skills */}
       <div className="space-y-2">
-        <h4 className="text-base font-semibold text-accent">Projects</h4>
-        <ul className="space-y-3">
-          <li className="pl-4 border-l-2 border-accent/30">
-            <p className="text-sm font-medium">Tech Workshops</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Organized hands-on coding sessions for 100+ students
-            </p>
-          </li>
-          <li className="pl-4 border-l-2 border-accent/30">
-            <p className="text-sm font-medium">Industry Talks</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Coordinated speaker events with 5 partner companies
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      {/* Tech Stack */}
-      <div className="space-y-2">
-        <h4 className="text-base font-semibold text-accent">Tech Stack</h4>
-        <div className="flex flex-wrap gap-2">
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Event Planning</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Team Leadership</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Public Speaking</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Project Management</span>
+        <h4 className="text-base font-semibold text-accent">Skills</h4>
+        <div className="flex flex-wrap gap-3">
+          <div className="flex-1 flex items-center justify-center gap-2 px-3 py-1 bg-accent/10 rounded">
+            <Calendar className="w-4 h-4 text-purple-400" />
+            <span className="text-accent text-xs">Event Planning</span>
+          </div>
+          <div className="flex-1 flex items-center justify-center gap-2 px-3 py-1 bg-accent/10 rounded">
+            <Users className="w-4 h-4 text-blue-400" />
+            <span className="text-accent text-xs">Team Leadership</span>
+          </div>
+          <div className="flex-1 flex items-center justify-center gap-2 px-3 py-1 bg-accent/10 rounded">
+            <Mic className="w-4 h-4 text-pink-400" />
+            <span className="text-accent text-xs">Public Speaking</span>
+          </div>
+          <div className="flex-1 flex items-center justify-center gap-2 px-3 py-1 bg-accent/10 rounded">
+            <ClipboardList className="w-4 h-4 text-green-400" />
+            <span className="text-accent text-xs">Project Management</span>
+          </div>
         </div>
       </div>
     </div>

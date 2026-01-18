@@ -1,90 +1,119 @@
-import { SiTypescript, SiPython, SiReact } from 'react-icons/si'
+import { SiHtml5, SiCss3, SiJavascript, SiMysql, SiGit, SiGithub } from 'react-icons/si'
+import { TbDatabase } from 'react-icons/tb'
 
 const Project5Page = () => {
   return (
     <div className="space-y-6">
-      {/* Visual-focused header */}
-      <div className="relative overflow-hidden rounded-lg border border-border p-6 bg-gradient-to-br from-accent/5 via-coral/5 to-transparent">
-        <h3 className="text-2xl font-bold">Project 5</h3>
-        <p className="text-sm text-muted-foreground mt-2">
-          Smart Task Automation Platform
-        </p>
-      </div>
-
-      {/* Quick facts */}
-      <div className="flex justify-between text-center">
-        <div>
-          <p className="text-xs text-muted-foreground">Duration</p>
-          <p className="text-sm font-semibold text-accent mt-0.5">3 months</p>
+      {/* Header - Rank 3 */}
+      <div className="space-y-3">
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <span className="px-2 py-0.5 bg-accent/10 rounded">Developer</span>
+          <span>2023</span>
         </div>
-        <div>
-          <p className="text-xs text-muted-foreground">Team Size</p>
-          <p className="text-sm font-semibold text-accent mt-0.5">Solo</p>
-        </div>
-        <div>
-          <p className="text-xs text-muted-foreground">Users</p>
-          <p className="text-sm font-semibold text-accent mt-0.5">1,000+</p>
+        <h3 className="text-2xl font-bold leading-tight">
+          On-campus Electronic Equipment Borrowing System
+        </h3>
+        <p className="text-sm text-coral">Web Application</p>
+        <div className="flex gap-3">
+          <a href="#" className="flex items-center gap-2 text-sm text-accent hover:underline">
+            <SiGithub className="w-4 h-4" />
+            View Code
+          </a>
         </div>
       </div>
 
-      {/* Description */}
-      <div>
-        <p className="text-sm text-muted-foreground">
-          An automation platform that lets users create custom workflows without code.
-          Supports 50+ integrations including Slack, Gmail, Notion, and more.
-        </p>
-      </div>
-
-      {/* Highlights in cards */}
+      {/* Description - Rank 2 */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Project Highlights</h4>
-        <div className="space-y-2">
-          <div className="flex gap-3 p-3 border border-border rounded-lg hover:border-accent/50 transition-colors">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-              <span className="text-accent text-xs font-bold">1</span>
-            </div>
-            <div className="flex-1">
-              <p className="text-xs font-medium">Visual Workflow Builder</p>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Drag-and-drop interface for creating automation flows
-              </p>
-            </div>
-          </div>
+        <h4 className="text-base font-semibold text-accent">About</h4>
+        <p className="text-sm text-muted-foreground">
+          Developed a web application to digitize the pen-and-paper system of component borrowing
+          from students. The system maintains records of student information, borrowed components,
+          and return details. Inspired by occurrences where lack of accountability between students
+          led to lost or unreturned equipment.
+        </p>
+      </div>
 
-          <div className="flex gap-3 p-3 border border-border rounded-lg hover:border-accent/50 transition-colors">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-              <span className="text-accent text-xs font-bold">2</span>
-            </div>
-            <div className="flex-1">
-              <p className="text-xs font-medium">Smart Triggers</p>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                AI-powered trigger suggestions based on user behavior
-              </p>
-            </div>
+      {/* Architecture - Rank 5 */}
+      <div className="space-y-2">
+        <h4 className="text-base font-semibold text-accent">Architecture</h4>
+        <div className="space-y-2 text-xs text-muted-foreground">
+          <div className="flex items-start gap-2">
+            <span className="font-mono text-coral min-w-[80px]">Frontend:</span>
+            <span>HTML/CSS/JavaScript for responsive user interface</span>
           </div>
-
-          <div className="flex gap-3 p-3 border border-border rounded-lg hover:border-accent/50 transition-colors">
-            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center">
-              <span className="text-accent text-xs font-bold">3</span>
-            </div>
-            <div className="flex-1">
-              <p className="text-xs font-medium">Execution Analytics</p>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Detailed logs and performance metrics for each workflow
-              </p>
-            </div>
+          <div className="flex items-start gap-2">
+            <span className="font-mono text-coral min-w-[80px]">Backend:</span>
+            <span>Server-side logic for CRUD operations</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="font-mono text-coral min-w-[80px]">Database:</span>
+            <span>MySQL for persistent storage of borrowing records</span>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="font-mono text-coral min-w-[80px]">Tables:</span>
+            <span>Students, Components, Borrowing Transactions, Return Details</span>
           </div>
         </div>
       </div>
 
-      {/* Tech icons with labels */}
-      <div className="pt-2 border-t border-border">
-        <div className="flex items-center gap-4">
-          <span className="text-xs text-muted-foreground">Technologies:</span>
-          <div className="flex items-center gap-3">
-            <SiReact className="w-4 h-4 text-cyan-400" title="React" />
-            <SiTypescript className="w-4 h-4 text-blue-400" title="TypeScript" />
-            <SiPython className="w-4 h-4 text-yellow-400" title="Python" />
+      {/* Features */}
+      <div className="space-y-2">
+        <h4 className="text-base font-semibold text-accent">Features</h4>
+        <div className="grid grid-cols-2 gap-2">
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">Student Records</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Track student borrowing history
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">Component Inventory</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Manage available equipment
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">Borrow/Return</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Log transactions with timestamps
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border border-accent/10 rounded">
+            <p className="text-xs font-medium">Accountability</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Track overdue items
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Tech Stack - Rank 1 */}
+      <div className="space-y-2">
+        <h4 className="text-base font-semibold text-accent">Tech Stack</h4>
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-2">
+            <SiHtml5 className="w-5 h-5 text-orange-500" />
+            <span className="text-sm">HTML</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <SiCss3 className="w-5 h-5 text-blue-500" />
+            <span className="text-sm">CSS</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <SiJavascript className="w-5 h-5 text-yellow-400" />
+            <span className="text-sm">JavaScript</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <SiMysql className="w-5 h-5 text-blue-600" />
+            <span className="text-sm">MySQL</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <TbDatabase className="w-5 h-5 text-green-500" />
+            <span className="text-sm">Database</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <SiGit className="w-5 h-5 text-orange-500" />
+            <span className="text-sm">Git</span>
           </div>
         </div>
       </div>

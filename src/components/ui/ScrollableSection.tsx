@@ -23,7 +23,7 @@ const ScrollableSection = ({
       <legend className={`text-xs px-2 transition-colors ${isActive ? 'text-[#6B9B9B]' : 'text-muted-foreground'}`}>[{title}]</legend>
 
       {/* Scrollable container - shows 3 items at a time when needed */}
-      <div className={`space-y-2 text-sm snap-y snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] ${needsScroll ? 'max-h-[108px] overflow-y-auto overflow-x-hidden' : ''}`}>
+      <div className={`space-y-2 text-sm snap-y snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] ${needsScroll ? 'max-h-[108px] overflow-y-auto overflow-x-hidden px-2 -mx-2' : ''}`}>
         {children}
       </div>
 
