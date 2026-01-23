@@ -1,6 +1,17 @@
+import { useSelection } from '../../context/SelectionContext'
 
+// First items of each section (matching the data in section components)
+const sectionLinks = [
+  { label: '💼 Experience', section: 'Experience' as const, data: { id: 1, role: 'Fullstack Developer', company: 'Supervaise', alias: 'Supervaise' } },
+  { label: '🚀 Projects', section: 'Projects' as const, data: { id: 1, name: 'Markerless Gait Analysis using 3D Human Pose Estimation' } },
+  { label: '🛠️ Tools', section: 'Tools' as const, data: { id: 1, name: 'HTML' } },
+  { label: '🎓 Education', section: 'Education' as const, data: { id: 1, degree: 'BS Computer Engineering', school: 'De La Salle University' } },
+  { label: '📜 Certifications', section: 'Certifications' as const, data: { id: 1, name: 'Gold Thesis Award', issuer: 'De La Salle University' } },
+]
 
 const AboutDetail = () => {
+  const { setSelectedItem } = useSelection()
+
   return (
     <div className="space-y-4">
       <div>
@@ -37,6 +48,19 @@ const AboutDetail = () => {
         <p className="text-sm text-foreground leading-relaxed">
           // What I'm Currently working on or learning
         </p>
+      </div>
+
+      {/* Navigation buttons to sections */}
+      <div className="grid grid-cols-3 gap-2">
+        {sectionLinks.map((link) => (
+          <button
+            key={link.label}
+            onClick={() => setSelectedItem({ section: link.section, data: link.data })}
+            className="px-2 py-1 text-xs hover:bg-foreground hover:text-background transition-colors duration-150"
+          >
+            [ {link.label} ]
+          </button>
+        ))}
       </div>
     </div>
   )
