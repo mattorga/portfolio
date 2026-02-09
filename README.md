@@ -9,7 +9,7 @@
 | Layer | Choice | Why |
 | --- | --- | --- |
 | **AI Backend** | Lambda Function URL (streaming) | Native response streaming, stays in AWS ecosystem |
-| **LLM** | Amazon Bedrock | Foundation model access (Claude, etc.), not intent-based like Lex |
+| **LLM** | Amazon Bedrock | Foundation model access (Claude, etc.) |
 | **Resume Context** | System prompt or S3 | Stuff resume into prompt; S3 if you want it dynamic |
 | **Rate Limiting** | IP-based via DynamoDB | Primary throttle per IP per day |
 | **Soft Limit** | Session-based (cookie) | UX-friendly message count for honest users |
