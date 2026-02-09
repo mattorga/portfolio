@@ -1,4 +1,5 @@
 import { SiJavascript } from 'react-icons/si'
+import RelatedExperienceLink from '../../ui/RelatedExperienceLink'
 
 const JavaScriptPage = () => {
   return (
@@ -11,66 +12,44 @@ const JavaScriptPage = () => {
         <div className="flex-1">
           <h3 className="text-2xl font-bold">JavaScript</h3>
           <p className="text-sm text-muted-foreground mt-1">
-            The Language of the Web
+            The Language of the Web (ES6+)
           </p>
         </div>
       </div>
 
-      {/* Foundation */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">My Foundation</h4>
-        <p className="text-sm text-muted-foreground">
-          JavaScript is where my web development journey began. Deep understanding of
-          its quirks, patterns, and modern features (ES6+) enables me to write
-          clean, performant code.
-        </p>
-      </div>
-
-      {/* Core concepts */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Core Concepts Mastered</h4>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Closures & Scope
+      {/* Use cases */}
+      <div className="space-y-3">
+        <h4 className="text-sm font-semibold text-accent">What I Use JavaScript For</h4>
+        <div className="space-y-2">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Client-Side Rendering</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Optimized React Router implementations reducing page load times
+            </p>
           </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Async/Await
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Desktop Application UI</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Frontend interfaces for 3D pose estimation desktop applications
+            </p>
           </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Promises
-          </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Event Loop
-          </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Prototypes
-          </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Modules (ESM)
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">API Integration</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              GraphQL and REST API consumption with AWS AppSync
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Modern features */}
+      {/* Related Projects */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">ES6+ Features I Love</h4>
-        <div className="text-sm text-muted-foreground space-y-1">
-          <p>• Destructuring & spread operators</p>
-          <p>• Arrow functions & implicit returns</p>
-          <p>• Optional chaining & nullish coalescing</p>
-          <p>• Array methods (map, filter, reduce)</p>
-        </div>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 gap-3">
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-xl font-bold text-accent">5+</p>
-          <p className="text-xs text-muted-foreground mt-1">Years Coding</p>
-        </div>
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-xl font-bold text-accent">50+</p>
-          <p className="text-xs text-muted-foreground mt-1">Projects</p>
+        <h4 className="text-sm font-semibold text-accent">Related Projects</h4>
+        <div className="grid grid-cols-1 gap-2 text-xs">
+          <RelatedExperienceLink label="Hino Motors Analytics Platform" year="2025-2026" />
+          <RelatedExperienceLink label="ISI Traffic Analytics Internship" year="2024" />
+          <RelatedExperienceLink label="GaitScape Thesis Application" year="2023-2025" />
+          <RelatedExperienceLink label="Component Borrowing System" year="2023" />
         </div>
       </div>
     </div>

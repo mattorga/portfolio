@@ -1,32 +1,38 @@
 import ScrollableSection from '../ui/ScrollableSection'
-import { SiReact, SiTypescript, SiPython } from 'react-icons/si'
+import { SiPython, SiJavascript, SiHtml5, SiCss3, SiOpencv, SiKeras } from 'react-icons/si'
+import { TbBrain } from 'react-icons/tb'
 import { useSelection } from '../../context/SelectionContext'
 
 const projects = [
   {
     id: 1,
     name: 'Markerless Gait Analysis using 3D Human Pose Estimation',
-    techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
+    techStack: [<SiPython />, <SiOpencv />, <SiJavascript />],
   },
   {
     id: 2,
-    name: 'Modified VGG-19 for CIFAR10 Dataset',
-    techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
+    name: 'LLM-Driven Automated Document Parser',
+    techStack: [<SiPython />, <TbBrain />],
   },
   {
     id: 3,
-    name: 'Pathological Gait Classification',
-    techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
+    name: 'Modified VGG-19 for CIFAR10 Dataset',
+    techStack: [<SiPython />, <SiKeras />],
   },
   {
     id: 4,
-    name: 'Exercise Pose Identifier and Rep Counter',
-    techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
+    name: 'Pathological Gait Classification using Hybrid CNN-LSTM',
+    techStack: [<SiPython />, <SiKeras />, <SiOpencv />],
   },
   {
     id: 5,
+    name: 'Exercise Pose Identifier and Rep Counter',
+    techStack: [<SiPython />, <SiOpencv />],
+  },
+  {
+    id: 6,
     name: 'On-campus Electronic Equipment Borrowing System',
-    techStack: [<SiTypescript/>, <SiPython />, <SiReact />],
+    techStack: [<SiHtml5 />, <SiCss3 />, <SiJavascript />],
   },
 ]
 

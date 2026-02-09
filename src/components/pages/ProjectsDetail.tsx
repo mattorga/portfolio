@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 import Project1Page from './projects/Project1Page'
+import LLMDocumentParserPage from './projects/LLMDocumentParserPage'
 import Project2Page from './projects/Project2Page'
 import Project3Page from './projects/Project3Page'
 import Project4Page from './projects/Project4Page'
@@ -15,11 +16,12 @@ interface ProjectsDetailProps {
 
 // Map project IDs to their custom page components
 const projectPages: Record<number, React.ComponentType> = {
-  1: Project1Page,
-  2: Project2Page,
-  3: Project3Page,
-  4: Project4Page,
-  5: Project5Page,
+  1: Project1Page,              // Markerless Gait Analysis
+  2: LLMDocumentParserPage,     // LLM-Driven Document Parser (NEW)
+  3: Project2Page,              // Modified VGG-19
+  4: Project3Page,              // Pathological Gait Classification
+  5: Project4Page,              // Exercise Pose Identifier
+  6: Project5Page,              // Borrowing System
 }
 
 const ProjectsDetail = ({ data }: ProjectsDetailProps) => {
