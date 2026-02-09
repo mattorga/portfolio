@@ -1,4 +1,5 @@
 import { SiNextdotjs } from 'react-icons/si'
+import RelatedExperienceLink from '../../ui/RelatedExperienceLink'
 
 const NextJSPage = () => {
   return (
@@ -16,48 +17,39 @@ const NextJSPage = () => {
         </div>
       </div>
 
-      {/* Features I've used */}
+      {/* Use cases */}
       <div className="space-y-3">
-        <h4 className="text-sm font-semibold text-accent">Features I've Mastered</h4>
-        <div className="grid grid-cols-2 gap-2">
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            App Router
+        <h4 className="text-sm font-semibold text-accent">What I Use Next.js For</h4>
+        <div className="space-y-2">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Greenfield Analytics Platform</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Built Hino Motors AI-driven analytics web application from scratch
+            </p>
           </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Server Components
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Serverless Backend Integration</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              API routes connected to AWS Lambda for real-time AI inference workloads
+            </p>
           </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            API Routes
-          </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            ISR & SSG
-          </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Middleware
-          </div>
-          <div className="p-2 bg-accent/5 border border-accent/10 rounded text-xs">
-            Image Optimization
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Full-Stack CI/CD</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Managed deployment lifecycles via AWS Amplify with multi-tenant scaling
+            </p>
           </div>
         </div>
       </div>
 
-      {/* What I've built */}
+      {/* Related Projects */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Built With Next.js</h4>
-        <div className="space-y-2 text-sm text-muted-foreground">
-          <p>• E-commerce platform with 10K+ monthly visitors</p>
-          <p>• SaaS dashboard with real-time analytics</p>
-          <p>• Marketing websites with perfect Lighthouse scores</p>
+        <h4 className="text-sm font-semibold text-accent">Related Projects</h4>
+        <div className="grid grid-cols-1 gap-2 text-xs">
+          <RelatedExperienceLink label="Hino Motors Analytics Platform" year="2025-2026" />
+          <RelatedExperienceLink label="Supervaise Software Engineer" year="2025-2026" />
+          <RelatedExperienceLink label="AWS Amplify Deployments" year="2025-2026" />
         </div>
-      </div>
-
-      {/* Highlight */}
-      <div className="p-3 bg-gradient-to-r from-coral/10 to-accent/10 rounded border-l-4 border-coral">
-        <p className="text-xs font-semibold mb-1">Why Next.js?</p>
-        <p className="text-xs text-muted-foreground">
-          Best DX for React apps. Built-in optimization, excellent routing, and seamless
-          deployment make it my framework of choice for production apps.
-        </p>
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import GoldThesisAwardPage from './certifications/GoldThesisAwardPage'
 import AWSAIPractitionerPage from './certifications/AWSAIPractitionerPage'
+import DataCampAIEngineerPage from './certifications/DataCampAIEngineerPage'
 import NVIDIALLMPage from './certifications/NVIDIALLMPage'
 import NVIDIADeepLearningPage from './certifications/NVIDIADeepLearningPage'
 
@@ -15,8 +16,9 @@ interface CertificationsDetailProps {
 const certificationPages: Record<number, React.ComponentType> = {
   1: GoldThesisAwardPage,
   2: AWSAIPractitionerPage,
-  3: NVIDIALLMPage,
-  4: NVIDIADeepLearningPage,
+  3: DataCampAIEngineerPage,
+  4: NVIDIALLMPage,
+  5: NVIDIADeepLearningPage,
 }
 
 const CertificationsDetail = ({ data }: CertificationsDetailProps) => {

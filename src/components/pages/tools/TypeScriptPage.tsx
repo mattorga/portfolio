@@ -1,4 +1,5 @@
 import { SiTypescript } from 'react-icons/si'
+import RelatedExperienceLink from '../../ui/RelatedExperienceLink'
 
 const TypeScriptPage = () => {
   return (
@@ -16,47 +17,38 @@ const TypeScriptPage = () => {
         </div>
       </div>
 
-      {/* Why I use it */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Why I Love It</h4>
-        <p className="text-sm text-muted-foreground">
-          TypeScript has become my go-to for any JavaScript project. The type safety
-          catches bugs early, improves code maintainability, and makes refactoring confident.
-        </p>
-      </div>
-
-      {/* Advanced features used */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Advanced Features I Use</h4>
-        <ul className="space-y-1.5">
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Generics and type constraints</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Utility types (Pick, Omit, Partial, Record)</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Type guards and discriminated unions</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Mapped types and conditional types</span>
-          </li>
-        </ul>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 gap-3">
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-xl font-bold text-accent">3+</p>
-          <p className="text-xs text-muted-foreground mt-1">Years Experience</p>
+      {/* Use cases */}
+      <div className="space-y-3">
+        <h4 className="text-sm font-semibold text-accent">What I Use TypeScript For</h4>
+        <div className="space-y-2">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Enterprise Web Applications</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Type-safe frontend development for analytics platforms at Supervaise
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">API Integration</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Strongly typed interfaces for AWS Lambda and REST API responses
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Complex Data Models</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Type definitions for AI inference results and business intelligence data
+            </p>
+          </div>
         </div>
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-xl font-bold text-accent">15+</p>
-          <p className="text-xs text-muted-foreground mt-1">Projects Built</p>
+      </div>
+
+      {/* Related Projects */}
+      <div className="space-y-2">
+        <h4 className="text-sm font-semibold text-accent">Related Projects</h4>
+        <div className="grid grid-cols-1 gap-2 text-xs">
+          <RelatedExperienceLink label="Hino Motors Analytics Platform" year="2025-2026" />
+          <RelatedExperienceLink label="Health Equity Dashboard" year="2025-2026" />
+          <RelatedExperienceLink label="This Portfolio Website" year="2025" />
         </div>
       </div>
     </div>

@@ -1,42 +1,42 @@
-import { SiPython } from 'react-icons/si'
+import { SiOpencv } from 'react-icons/si'
 import RelatedExperienceLink from '../../ui/RelatedExperienceLink'
 
-const PythonPage = () => {
+const OpenCVPage = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-start gap-4">
-        <div className="p-3 bg-yellow-500/10 rounded-lg">
-          <SiPython className="w-10 h-10 text-yellow-500" />
+        <div className="p-3 bg-green-500/10 rounded-lg">
+          <SiOpencv className="w-10 h-10 text-green-500" />
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold">Python</h3>
+          <h3 className="text-2xl font-bold">OpenCV</h3>
           <p className="text-sm text-muted-foreground mt-1">
-            Versatile Programming Language
+            Computer Vision Library
           </p>
         </div>
       </div>
 
       {/* Use cases */}
       <div className="space-y-3">
-        <h4 className="text-sm font-semibold text-accent">What I Use Python For</h4>
+        <h4 className="text-sm font-semibold text-accent">What I Use OpenCV For</h4>
         <div className="space-y-2">
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-sm font-medium">AWS Lambda Functions</p>
+            <p className="text-sm font-medium">3D Human Pose Estimation</p>
             <p className="text-xs text-muted-foreground mt-1">
-              Serverless backend logic for real-time AI analytics and data processing
+              Core component of my thesis for markerless gait analysis
             </p>
           </div>
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-sm font-medium">Computer Vision Pipelines</p>
+            <p className="text-sm font-medium">Image Processing Pipelines</p>
             <p className="text-xs text-muted-foreground mt-1">
-              3D Human Pose Estimation with OpenCV, OpenPose, and MediaPipe
+              Video capture, frame processing, and visualization
             </p>
           </div>
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-sm font-medium">LLM Applications</p>
+            <p className="text-sm font-medium">Exercise Pose Detection</p>
             <p className="text-xs text-muted-foreground mt-1">
-              Building AI workflows with LangChain and Pydantic for data validation
+              Joint angle calculation for exercise identification
             </p>
           </div>
         </div>
@@ -46,17 +46,22 @@ const PythonPage = () => {
       <div className="space-y-2">
         <h4 className="text-sm font-semibold text-accent">Related Projects</h4>
         <div className="grid grid-cols-1 gap-2 text-xs">
-          <RelatedExperienceLink label="Hino Motors Backend Development" year="2025-2026" />
-          <RelatedExperienceLink label="Internal QA Tool" year="2025-2026" />
-          <RelatedExperienceLink label="LLM Document Parser Project" year="2025" />
           <RelatedExperienceLink label="GaitScape Thesis (Gold Medal)" year="2023-2025" />
+          <RelatedExperienceLink label="ITC-CSCC Publication" year="2025" />
           <RelatedExperienceLink label="CNN-LSTM Gait Classification" year="2024" />
-          <RelatedExperienceLink label="VGG-19 Image Classification" year="2024" />
           <RelatedExperienceLink label="Exercise Rep Counter" year="2023" />
+        </div>
+      </div>
+
+      {/* Related Certifications */}
+      <div className="space-y-2">
+        <h4 className="text-sm font-semibold text-accent">Related Certifications</h4>
+        <div className="grid grid-cols-1 gap-2 text-xs">
+          <RelatedExperienceLink label="Gold Medal Thesis Award" year="2025" />
         </div>
       </div>
     </div>
   )
 }
 
-export default PythonPage
+export default OpenCVPage

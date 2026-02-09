@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiPython, SiReact, SiNextdotjs, SiTailwindcss, SiAmazon } from "react-icons/si"
+import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiPython, SiReact, SiNextdotjs, SiTailwindcss, SiAmazon, SiPytorch, SiTensorflow, SiOpencv, SiDocker, SiLangchain } from "react-icons/si"
 import { IconType } from "react-icons"
 import ScrollableSection from "../ui/ScrollableSection"
 import { useSelection } from '../../context/SelectionContext'
@@ -13,6 +13,11 @@ const tools: { id: number; name: string; icon: IconType }[] = [
   { id: 7, name: 'JavaScript', icon: SiJavascript },
   { id: 8, name: 'React', icon: SiReact },
   { id: 9, name: 'AWS', icon: SiAmazon },
+  { id: 10, name: 'PyTorch', icon: SiPytorch },
+  { id: 11, name: 'TensorFlow', icon: SiTensorflow },
+  { id: 12, name: 'OpenCV', icon: SiOpencv },
+  { id: 13, name: 'Docker', icon: SiDocker },
+  { id: 14, name: 'LangChain', icon: SiLangchain },
 ]
 
 const Tools = () => {

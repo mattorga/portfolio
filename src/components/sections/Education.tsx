@@ -6,10 +6,26 @@ const educationList = [
     id: 1,
     degree: 'BS Computer Engineering',
     school: 'De La Salle University',
+    location: 'Malate, Manila',
+    period: 'Graduated June 2025',
+    description: 'Specialized in software systems, embedded computing, and intelligent systems with a focus on practical applications of machine learning and computer vision.',
     achievements: [
-      'Gold Thesis Awardee',
-      'CGPA: 3.0/4.0'
-    ]
+      'Gold Medal for Outstanding Thesis',
+    ],
+    coursework: [
+      'Data Structures & Algorithms',
+      'Database Systems',
+      'Machine Learning',
+      'Computer Networks',
+      'Operating Systems',
+      'Software Engineering',
+      'Digital Signal Processing',
+      'Embedded Systems'
+    ],
+    thesis: {
+      title: 'Markerless Gait Analysis using 3D Human Pose Estimation',
+      description: 'Developed a 3D Human Pose Estimation system using complex Computer Vision pipelines (OpenCV, OpenPose) for clinical gait analysis.'
+    }
   },
 ]
 
@@ -32,7 +48,7 @@ const Education = () => {
           <div
             key={edu.id}
             onClick={() => setSelectedItem({ section: 'Education', data: edu })}
-            className={`hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer snap-start group ${isSelected ? 'bg-accent text-accent-foreground' : ''}`}
+            className={`flex flex-col hover:bg-accent hover:text-accent-foreground transition-colors px-2 py-1 -mx-2 cursor-pointer snap-start group ${isSelected ? 'bg-accent text-accent-foreground' : ''}`}
           >
             <div className="space-y-0.5">
               <div>{edu.degree}</div>
@@ -40,9 +56,9 @@ const Education = () => {
             </div>
 
             {edu.achievements && edu.achievements.length > 0 && (
-              <div className={`pl-4 space-y-0.5 text-xs mt-1 ${isSelected ? 'text-accent-foreground' : 'text-gray-400 group-hover:text-accent-foreground'}`}>
+              <div className={`space-y-0.5 text-xs mt-1 ${isSelected ? 'text-accent-foreground' : 'text-gray-400 group-hover:text-accent-foreground'}`}>
                 {edu.achievements.map((achievement, idx) => (
-                  <div key={idx}>|-- {achievement}</div>
+                  <div key={idx}>└ {achievement}</div>
                 ))}
               </div>
             )}

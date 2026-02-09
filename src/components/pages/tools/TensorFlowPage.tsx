@@ -1,42 +1,42 @@
-import { SiAmazon } from 'react-icons/si'
+import { SiTensorflow } from 'react-icons/si'
 import RelatedExperienceLink from '../../ui/RelatedExperienceLink'
 
-const AWSPage = () => {
+const TensorFlowPage = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-start gap-4">
-        <div className="p-3 bg-orange-400/10 rounded-lg">
-          <SiAmazon className="w-10 h-10 text-orange-400" />
+        <div className="p-3 bg-orange-600/10 rounded-lg">
+          <SiTensorflow className="w-10 h-10 text-orange-600" />
         </div>
         <div className="flex-1">
-          <h3 className="text-2xl font-bold">AWS</h3>
+          <h3 className="text-2xl font-bold">TensorFlow</h3>
           <p className="text-sm text-muted-foreground mt-1">
-            Amazon Web Services Cloud Platform
+            Machine Learning Platform
           </p>
         </div>
       </div>
 
       {/* Use cases */}
       <div className="space-y-3">
-        <h4 className="text-sm font-semibold text-accent">What I Use AWS For</h4>
+        <h4 className="text-sm font-semibold text-accent">What I Use TensorFlow For</h4>
         <div className="space-y-2">
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-sm font-medium">Serverless Backend Architecture</p>
+            <p className="text-sm font-medium">Image Classification</p>
             <p className="text-xs text-muted-foreground mt-1">
-              10+ RESTful APIs with Lambda, API Gateway, and S3 for edge-device inference logs
+              Building CNNs with Keras for real-world computer vision tasks
             </p>
           </div>
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-sm font-medium">Authentication & Security</p>
+            <p className="text-sm font-medium">Model Optimization</p>
             <p className="text-xs text-muted-foreground mt-1">
-              Cognito for role-based access control and VPC network isolation
+              Data augmentation and transfer learning for improved accuracy
             </p>
           </div>
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-sm font-medium">CI/CD & Monitoring</p>
+            <p className="text-sm font-medium">Hybrid Architectures</p>
             <p className="text-xs text-muted-foreground mt-1">
-              Amplify deployments with CloudWatch performance monitoring
+              CNN-LSTM models for sequential data classification
             </p>
           </div>
         </div>
@@ -46,10 +46,8 @@ const AWSPage = () => {
       <div className="space-y-2">
         <h4 className="text-sm font-semibold text-accent">Related Projects</h4>
         <div className="grid grid-cols-1 gap-2 text-xs">
-          <RelatedExperienceLink label="Hino Motors Analytics Platform" year="2025-2026" />
-          <RelatedExperienceLink label="Internal QA Tool" year="2025-2026" />
-          <RelatedExperienceLink label="Hino Motors Low-Code Tool" year="2025-2026" />
-          <RelatedExperienceLink label="ISI Traffic Analytics Internship" year="2024" />
+          <RelatedExperienceLink label="Modified VGG-19 for CIFAR10" year="2024" />
+          <RelatedExperienceLink label="Pathological Gait Classification" year="2024" />
         </div>
       </div>
 
@@ -57,11 +55,11 @@ const AWSPage = () => {
       <div className="space-y-2">
         <h4 className="text-sm font-semibold text-accent">Related Certifications</h4>
         <div className="grid grid-cols-1 gap-2 text-xs">
-          <RelatedExperienceLink label="AWS Certified AI Practitioner" year="2025" />
+          <RelatedExperienceLink label="NVIDIA Deep Learning Certification" year="2025" />
         </div>
       </div>
     </div>
   )
 }
 
-export default AWSPage
+export default TensorFlowPage

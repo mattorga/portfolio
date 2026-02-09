@@ -20,7 +20,7 @@ const NVIDIALLMPage = () => {
           <span className="px-3 py-1 bg-green-500/10 text-green-500 text-xs rounded-full font-medium">
             Completed
           </span>
-          <span className="text-xs text-muted-foreground">Issued: 2024</span>
+          <span className="text-xs text-muted-foreground">Issued: 2025</span>
         </div>
       </div>
 

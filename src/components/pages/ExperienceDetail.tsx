@@ -1,6 +1,5 @@
 import SupervaisePage from './experience/SupervaisePage'
 import ISIPage from './experience/ISIPage'
-import DLSUAccessPage from './experience/DLSUAccessPage'
 
 interface ExperienceDetailProps {
   data: {
@@ -15,7 +14,6 @@ interface ExperienceDetailProps {
 const experiencePages: Record<number, React.ComponentType> = {
   1: SupervaisePage,
   2: ISIPage,
-  3: DLSUAccessPage,
 }
 
 const ExperienceDetail = ({ data }: ExperienceDetailProps) => {

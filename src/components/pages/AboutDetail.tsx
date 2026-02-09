@@ -2,11 +2,11 @@ import { useSelection } from '../../context/SelectionContext'
 
 // First items of each section (matching the data in section components)
 const sectionLinks = [
-  { label: '💼 Experience', section: 'Experience' as const, data: { id: 1, role: 'Fullstack Developer', company: 'Supervaise', alias: 'Supervaise' } },
+  { label: '💼 Experience', section: 'Experience' as const, data: { id: 1, role: 'Software Engineer', company: 'Supervaise', alias: 'Supervaise' } },
   { label: '🚀 Projects', section: 'Projects' as const, data: { id: 1, name: 'Markerless Gait Analysis using 3D Human Pose Estimation' } },
   { label: '🛠️ Tools', section: 'Tools' as const, data: { id: 1, name: 'HTML' } },
   { label: '🎓 Education', section: 'Education' as const, data: { id: 1, degree: 'BS Computer Engineering', school: 'De La Salle University' } },
-  { label: '📜 Certifications', section: 'Certifications' as const, data: { id: 1, name: 'Gold Thesis Award', issuer: 'De La Salle University' } },
+  { label: '📜 Certifications', section: 'Certifications' as const, data: { id: 1, name: 'Gold Medal for Outstanding Thesis', issuer: 'De La Salle University' } },
 ]
 
 const AboutDetail = () => {
@@ -17,8 +17,8 @@ const AboutDetail = () => {
       <div>
         <h3 className="text-base font-medium mb-2">About Me</h3>
         <p className="text-sm text-foreground leading-relaxed">
-          Hi! I'm Matthew, I am a Fullstack Developer specializing in backend-heavy,
-          data-driven, and AI-focused solutions.
+          Hi! I'm Matthew, a Software Engineer and AWS Certified AI Practitioner with a BS in Computer Engineering.
+          I specialize in backend-heavy, data-driven, and AI-focused solutions.
         </p>
       </div>
 
@@ -37,16 +37,15 @@ const AboutDetail = () => {
       <div>
         <h4 className="text-sm font-medium text-muted-foreground mb-1">[What I Do]</h4>
         <p className="text-sm text-foreground leading-relaxed">
-          {/*// Focus areas, what you're passionate about building, etc.*/}
-
-
+          I architect Edge-to-Cloud AI pipelines and scalable serverless backends using the AWS ecosystem.
+          My track record spans high-complexity systems, from 3D Human Pose Estimation to real-time analytics orchestration.
         </p>
       </div>
 
       <div>
         <h4 className="text-sm font-medium text-muted-foreground mb-1">Currently</h4>
         <p className="text-sm text-foreground leading-relaxed">
-          // What I'm Currently working on or learning
+          Specializing in the deployment of applied AI workflows and intelligent agentic systems.
         </p>
       </div>
 

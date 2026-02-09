@@ -4,21 +4,26 @@ import { useSelection } from '../../context/SelectionContext'
 const certifications = [
   {
     id: 1,
-    name: 'Gold Thesis Award',
+    name: 'Gold Medal for Outstanding Thesis',
     issuer: 'De La Salle University'
   },
   {
     id: 2,
-    name: 'Certified AI Practitioner',
-    issuer: 'AWS'
+    name: 'AWS Certified AI Practitioner',
+    issuer: 'Amazon Web Services'
   },
   {
     id: 3,
-    name: ['Building LLM Applications', 'with Prompt Engineering'], // Multi-line cert name
-    issuer: 'NVIDIA'
+    name: ['Associate AI Engineer', 'for Developers'],
+    issuer: 'DataCamp'
   },
   {
     id: 4,
+    name: ['Building LLM Applications', 'with Prompt Engineering'],
+    issuer: 'NVIDIA'
+  },
+  {
+    id: 5,
     name: 'Fundamentals of Deep Learning',
     issuer: 'NVIDIA'
   },
