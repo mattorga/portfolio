@@ -3,7 +3,7 @@
 | Layer | Choice | Why |
 | --- | --- | --- |
 | **Frontend** | React + Vite | Lightweight, no SSR needed, fast builds |
-| **Hosting** | AWS Amplify (Currently in Vercel) | Built-in CI/CD, easy static site deployment |
+| **Hosting** | AWS Amplify | Built-in CI/CD, easy static site deployment |
 
 # Todos
 | Layer | Choice | Why |
