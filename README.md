@@ -9,6 +9,7 @@
 
 # Todos
 | Layer | Choice | Why |
+| --- | --- | --- |
 | **Resume Context** | System prompt or S3 | Stuff resume into prompt; S3 if you want it dynamic |
 | **Rate Limiting** | IP-based via DynamoDB | Primary throttle per IP per day |
 | **Soft Limit** | Session-based (cookie) | UX-friendly message count for honest users |
