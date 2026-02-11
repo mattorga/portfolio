@@ -1,86 +1,120 @@
+import { useState } from 'react'
+import goldThesisCertificate from '@/assets/gold_thesis_certificate.webp'
+
 const GoldThesisAwardPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
     <div className="space-y-6">
-      {/* Header with badge */}
+      {/* Header with DLSU branding */}
       <div className="space-y-3">
-        <div className="flex items-center gap-3">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
-            <span className="text-3xl">🏆</span>
+        <div className="flex items-start gap-4">
+          <div className="p-3 bg-yellow-500/10 rounded-lg">
+            <div className="w-12 h-12 flex items-center justify-center text-3xl">
+              🏆
+            </div>
           </div>
           <div className="flex-1">
             <h3 className="text-2xl font-bold">Gold Thesis Award</h3>
             <p className="text-coral text-sm mt-1">De La Salle University</p>
+            <p className="text-xs text-muted-foreground mt-1">May 2024</p>
           </div>
         </div>
-        <p className="text-xs text-muted-foreground">Awarded: May 2024</p>
       </div>
 
-      {/* About the award */}
+      {/* What this award represents */}
       <div className="space-y-2">
         <h4 className="text-base font-semibold text-accent">About the Award</h4>
         <p className="text-sm text-muted-foreground">
           The Gold Thesis Award is the highest distinction given to undergraduate
-          thesis projects at De La Salle University, recognizing exceptional research,
-          innovation, and technical excellence.
+          thesis projects at DLSU, recognizing exceptional research, innovation,
+          and technical excellence.
         </p>
       </div>
 
-      {/* Thesis details */}
-      <div className="p-4 bg-accent/5 border border-accent/10 rounded-lg space-y-3">
-        <div>
-          <h4 className="text-sm font-semibold text-accent mb-1">Thesis Title</h4>
-          <p className="text-sm text-muted-foreground">
-            [Your Thesis Title Here - AI/ML/Backend Related]
-          </p>
-        </div>
-        <div>
-          <h4 className="text-sm font-semibold text-accent mb-1">Research Focus</h4>
-          <p className="text-sm text-muted-foreground">
-            Developed an innovative solution addressing [problem domain], utilizing
-            machine learning and full-stack development techniques.
-          </p>
-        </div>
-      </div>
-
       {/* Key achievements */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Key Achievements</h4>
-        <ul className="space-y-1.5">
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Selected as Best Thesis among 50+ submissions</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Presented research findings to academic panel</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Demonstrated technical innovation and practical application</span>
-          </li>
-        </ul>
+      <div className="space-y-3">
+        <h4 className="text-sm font-semibold text-accent">Core Achievements</h4>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">Research Excellence</p>
+            <p className="text-xs text-muted-foreground">
+              Selected as Best Thesis among 50+ submissions
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">Technical Innovation</p>
+            <p className="text-xs text-muted-foreground">
+              Developed novel solution using ML and full-stack techniques
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">Practical Application</p>
+            <p className="text-xs text-muted-foreground">
+              Demonstrated real-world problem solving capabilities
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Technologies used */}
       <div className="space-y-2">
         <h4 className="text-sm font-semibold text-accent">Technologies Used</h4>
         <div className="flex flex-wrap gap-2">
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Python</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Machine Learning</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">React</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Data Analysis</span>
+          <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
+            Python
+          </span>
+          <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
+            Machine Learning
+          </span>
+          <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
+            React
+          </span>
+          <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
+            Data Analysis
+          </span>
         </div>
       </div>
 
-      {/* Impact */}
-      <div className="p-3 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 rounded border-l-4 border-yellow-400">
-        <h4 className="text-xs font-semibold mb-1">Impact & Recognition</h4>
-        <p className="text-xs text-muted-foreground">
-          This recognition validates my ability to conduct independent research and
-          develop innovative technical solutions - skills crucial for backend-heavy
-          and data-driven development roles.
-        </p>
+      {/* Certificate Image */}
+      <div className="space-y-2">
+        <h4 className="text-sm font-semibold text-accent">Certificate</h4>
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="block w-full cursor-zoom-in"
+        >
+          <img
+            src={goldThesisCertificate}
+            alt="Gold Thesis Award Certificate"
+            className="w-full rounded-lg border border-border hover:border-accent/50 transition-colors"
+          />
+        </button>
+        <p className="text-xs text-muted-foreground text-center">Click to enlarge</p>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-zoom-out"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div className="relative flex items-center justify-center">
+            <img
+              src={goldThesisCertificate}
+              alt="Gold Thesis Award Certificate"
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg"
+            />
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 p-2 text-white/70 hover:text-white transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

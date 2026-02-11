@@ -1,7 +1,7 @@
 const NVIDIADeepLearningPage = () => {
   return (
     <div className="space-y-6">
-      {/* Header */}
+      {/* Header with NVIDIA branding */}
       <div className="space-y-3">
         <div className="flex items-start gap-4">
           <div className="p-3 bg-green-500/10 rounded-lg">
@@ -12,19 +12,14 @@ const NVIDIADeepLearningPage = () => {
           <div className="flex-1">
             <h3 className="text-2xl font-bold">Fundamentals of Deep Learning</h3>
             <p className="text-coral text-sm mt-1">NVIDIA Deep Learning Institute</p>
+            <p className="text-xs text-muted-foreground mt-1">Issued: 2024</p>
           </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-green-500/10 text-green-500 text-xs rounded-full font-medium">
-            Completed
-          </span>
-          <span className="text-xs text-muted-foreground">Issued: 2024</span>
         </div>
       </div>
 
-      {/* Course description */}
+      {/* What this certification covers */}
       <div className="space-y-2">
-        <h4 className="text-base font-semibold text-accent">Foundation Course</h4>
+        <h4 className="text-base font-semibold text-accent">What I Learned</h4>
         <p className="text-sm text-muted-foreground">
           Comprehensive introduction to deep learning, covering neural network
           architectures, training techniques, and practical implementation using
@@ -32,85 +27,69 @@ const NVIDIADeepLearningPage = () => {
         </p>
       </div>
 
-      {/* Core topics */}
+      {/* Key competencies */}
       <div className="space-y-3">
-        <h4 className="text-sm font-semibold text-accent">Core Topics Covered</h4>
-        <div className="grid grid-cols-1 gap-2">
-          <div className="p-3 bg-accent/5 rounded border-l-4 border-accent">
-            <p className="text-xs font-medium">Neural Network Fundamentals</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Forward/backward propagation, activation functions, loss functions
+        <h4 className="text-sm font-semibold text-accent">Core Competencies</h4>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">Neural Networks</p>
+            <p className="text-xs text-muted-foreground">
+              Forward/backward propagation, activation and loss functions
             </p>
           </div>
-          <div className="p-3 bg-accent/5 rounded border-l-4 border-accent">
-            <p className="text-xs font-medium">Convolutional Neural Networks (CNNs)</p>
-            <p className="text-xs text-muted-foreground mt-1">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">CNNs</p>
+            <p className="text-xs text-muted-foreground">
               Image classification, object detection, transfer learning
             </p>
           </div>
-          <div className="p-3 bg-accent/5 rounded border-l-4 border-accent">
-            <p className="text-xs font-medium">Recurrent Neural Networks (RNNs)</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Sequence modeling, LSTMs, time series analysis
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">RNNs & LSTMs</p>
+            <p className="text-xs text-muted-foreground">
+              Sequence modeling and time series analysis
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">Model Training</p>
+            <p className="text-xs text-muted-foreground">
+              Optimization, regularization, and hyperparameter tuning
             </p>
           </div>
         </div>
       </div>
 
-      {/* Hands-on projects */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Hands-On Projects</h4>
-        <ul className="space-y-1.5">
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Built image classifier with 90%+ accuracy</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Trained custom object detection model</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Implemented sentiment analysis with RNNs</span>
-          </li>
-        </ul>
-      </div>
-
-      {/* Frameworks */}
+      {/* Frameworks used */}
       <div className="space-y-2">
         <h4 className="text-sm font-semibold text-accent">Frameworks Used</h4>
         <div className="flex flex-wrap gap-2">
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">TensorFlow</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">Keras</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">PyTorch</span>
-          <span className="px-3 py-1 bg-accent/10 text-accent text-xs rounded">CUDA</span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            TensorFlow
+          </span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            Keras
+          </span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            PyTorch
+          </span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            CUDA
+          </span>
         </div>
       </div>
 
-      {/* Foundation for AI work */}
-      <div className="p-3 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded border-l-4 border-green-500">
-        <h4 className="text-xs font-semibold mb-1">Foundation for AI Development</h4>
-        <p className="text-xs text-muted-foreground">
-          This course provided the essential knowledge needed to understand and implement
-          deep learning models - crucial for building data-driven and AI-powered backend
-          systems.
-        </p>
-      </div>
-
-      {/* Performance metrics */}
-      <div className="grid grid-cols-3 gap-3">
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-lg font-bold text-accent">8hrs</p>
-          <p className="text-xs text-muted-foreground mt-1">Course Duration</p>
-        </div>
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-lg font-bold text-accent">5</p>
-          <p className="text-xs text-muted-foreground mt-1">Projects Built</p>
-        </div>
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-lg font-bold text-accent">100%</p>
-          <p className="text-xs text-muted-foreground mt-1">Completion</p>
-        </div>
+      {/* Credential */}
+      <div className="text-center pt-4">
+        <a
+          href="https://learn.nvidia.com/certificates?id=-ZQ43gWTRXClKUfxyPMTkQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-accent border border-accent/30 rounded-full hover:bg-accent/10 hover:border-accent transition-all"
+        >
+          View Credential on NVIDIA
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
   )

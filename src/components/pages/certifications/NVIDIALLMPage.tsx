@@ -10,102 +10,85 @@ const NVIDIALLMPage = () => {
             </div>
           </div>
           <div className="flex-1">
-            <h3 className="text-xl font-bold leading-tight">
-              Building LLM Applications with Prompt Engineering
-            </h3>
+            <h3 className="text-2xl font-bold">Building LLM Applications</h3>
             <p className="text-coral text-sm mt-1">NVIDIA Deep Learning Institute</p>
+            <p className="text-xs text-muted-foreground mt-1">Issued: 2024</p>
           </div>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="px-3 py-1 bg-green-500/10 text-green-500 text-xs rounded-full font-medium">
-            Completed
-          </span>
-          <span className="text-xs text-muted-foreground">Issued: 2024</span>
         </div>
       </div>
 
-      {/* Course overview */}
+      {/* What this certification covers */}
       <div className="space-y-2">
-        <h4 className="text-base font-semibold text-accent">Course Overview</h4>
+        <h4 className="text-base font-semibold text-accent">What I Learned</h4>
         <p className="text-sm text-muted-foreground">
           Hands-on course focused on building practical LLM applications using prompt
-          engineering techniques, RAG (Retrieval-Augmented Generation), and best practices
-          for production deployment.
+          engineering techniques, RAG architecture, and best practices for production deployment.
         </p>
       </div>
 
-      {/* What I learned */}
+      {/* Key competencies */}
       <div className="space-y-3">
-        <h4 className="text-sm font-semibold text-accent">Skills Acquired</h4>
-        <div className="space-y-2">
-          <div className="flex gap-3 items-start">
-            <span className="text-accent mt-1">1.</span>
-            <div className="flex-1">
-              <p className="text-sm font-medium">Advanced Prompt Engineering</p>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Zero-shot, few-shot, chain-of-thought, and self-consistency prompting
-              </p>
-            </div>
+        <h4 className="text-sm font-semibold text-accent">Core Competencies</h4>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">Prompt Engineering</p>
+            <p className="text-xs text-muted-foreground">
+              Zero-shot, few-shot, and chain-of-thought prompting
+            </p>
           </div>
-          <div className="flex gap-3 items-start">
-            <span className="text-accent mt-1">2.</span>
-            <div className="flex-1">
-              <p className="text-sm font-medium">RAG Implementation</p>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Building retrieval systems with vector databases and embeddings
-              </p>
-            </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">RAG Implementation</p>
+            <p className="text-xs text-muted-foreground">
+              Vector databases and embedding retrieval systems
+            </p>
           </div>
-          <div className="flex gap-3 items-start">
-            <span className="text-accent mt-1">3.</span>
-            <div className="flex-1">
-              <p className="text-sm font-medium">LLM Fine-tuning</p>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Parameter-efficient fine-tuning techniques for domain adaptation
-              </p>
-            </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">LLM Fine-tuning</p>
+            <p className="text-xs text-muted-foreground">
+              Parameter-efficient techniques for domain adaptation
+            </p>
           </div>
-          <div className="flex gap-3 items-start">
-            <span className="text-accent mt-1">4.</span>
-            <div className="flex-1">
-              <p className="text-sm font-medium">Production Best Practices</p>
-              <p className="text-xs text-muted-foreground mt-0.5">
-                Cost optimization, latency reduction, and safety guardrails
-              </p>
-            </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-xs font-medium mb-1">Production Best Practices</p>
+            <p className="text-xs text-muted-foreground">
+              Cost optimization and safety guardrails
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Projects built */}
-      <div className="p-4 bg-accent/5 border border-accent/10 rounded-lg space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Projects Completed</h4>
-        <ul className="text-xs text-muted-foreground space-y-1">
-          <li>• Built a custom Q&A system using RAG architecture</li>
-          <li>• Developed prompt templates for code generation tasks</li>
-          <li>• Implemented guardrails for safe LLM outputs</li>
-        </ul>
-      </div>
-
-      {/* Technologies */}
+      {/* Tools used */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Tools & Frameworks</h4>
+        <h4 className="text-sm font-semibold text-accent">Tools & Frameworks Used</h4>
         <div className="flex flex-wrap gap-2">
-          <span className="px-2 py-1 bg-accent/10 text-xs rounded">LangChain</span>
-          <span className="px-2 py-1 bg-accent/10 text-xs rounded">OpenAI API</span>
-          <span className="px-2 py-1 bg-accent/10 text-xs rounded">Vector DBs</span>
-          <span className="px-2 py-1 bg-accent/10 text-xs rounded">Python</span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            LangChain
+          </span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            OpenAI API
+          </span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            Vector DBs
+          </span>
+          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+            Python
+          </span>
         </div>
       </div>
 
-      {/* Career application */}
-      <div className="p-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded border-l-4 border-green-500">
-        <h4 className="text-xs font-semibold mb-1">Why This Matters</h4>
-        <p className="text-xs text-muted-foreground">
-          LLMs are transforming backend development. This certification equips me
-          to build intelligent, AI-powered features into full-stack applications,
-          a key skill for modern data-driven roles.
-        </p>
+      {/* Credential */}
+      <div className="text-center pt-4">
+        <a
+          href="https://learn.nvidia.com/certificates?id=NAwU8vGgRm-VIKLcQtl2hQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-accent border border-accent/30 rounded-full hover:bg-accent/10 hover:border-accent transition-all"
+        >
+          View Credential on NVIDIA
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
       </div>
     </div>
   )
