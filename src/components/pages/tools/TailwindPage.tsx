@@ -1,4 +1,5 @@
 import { SiTailwindcss } from 'react-icons/si'
+import RelatedExperienceLink from '../../ui/RelatedExperienceLink'
 
 const TailwindPage = () => {
   return (
@@ -16,56 +17,37 @@ const TailwindPage = () => {
         </div>
       </div>
 
-      {/* Why I love it */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Why Tailwind?</h4>
-        <p className="text-sm text-muted-foreground">
-          Tailwind has revolutionized how I write CSS. The utility-first approach
-          speeds up development, enforces consistency, and makes responsive design effortless.
-        </p>
-      </div>
-
-      {/* Advanced usage */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Advanced Techniques</h4>
-        <ul className="space-y-1.5">
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Custom theme configuration with design tokens</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Creating custom plugins and utilities</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Optimizing bundle size with PurgeCSS</span>
-          </li>
-          <li className="flex items-start gap-2 text-sm text-muted-foreground">
-            <span className="text-accent mt-0.5">▹</span>
-            <span>Dark mode implementation with CSS variables</span>
-          </li>
-        </ul>
-      </div>
-
-      {/* This portfolio */}
-      <div className="p-3 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded border-l-4 border-cyan-500">
-        <p className="text-xs font-semibold mb-1">Fun Fact</p>
-        <p className="text-xs text-muted-foreground">
-          This entire portfolio is built with Tailwind CSS! Every component, every animation,
-          every responsive breakpoint - all using Tailwind utilities.
-        </p>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 gap-3">
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-xl font-bold text-accent">20+</p>
-          <p className="text-xs text-muted-foreground mt-1">Projects Built</p>
+      {/* Use cases */}
+      <div className="space-y-3">
+        <h4 className="text-sm font-semibold text-accent">What I Use Tailwind For</h4>
+        <div className="space-y-2">
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Rapid UI Development</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Building responsive layouts quickly with utility classes
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Design System Consistency</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Custom theme configuration for consistent design tokens
+            </p>
+          </div>
+          <div className="p-3 bg-accent/5 border-l-2 border-accent">
+            <p className="text-sm font-medium">Component Libraries</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Creating reusable styled components with dark mode support
+            </p>
+          </div>
         </div>
-        <div className="text-center p-3 bg-accent/5 rounded">
-          <p className="text-xl font-bold text-accent">2+</p>
-          <p className="text-xs text-muted-foreground mt-1">Years Experience</p>
+      </div>
+
+      {/* Related Projects */}
+      <div className="space-y-2">
+        <h4 className="text-sm font-semibold text-accent">Related Projects</h4>
+        <div className="grid grid-cols-1 gap-2 text-xs">
+          <RelatedExperienceLink label="This Portfolio Website" year="2025" />
+          <RelatedExperienceLink label="Health Equity Dashboard" year="2025-2026" />
         </div>
       </div>
     </div>

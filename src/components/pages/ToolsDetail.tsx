@@ -8,6 +8,11 @@ import TailwindPage from './tools/TailwindPage'
 import JavaScriptPage from './tools/JavaScriptPage'
 import ReactPage from './tools/ReactPage'
 import AWSPage from './tools/AWSPage'
+import PyTorchPage from './tools/PyTorchPage'
+import TensorFlowPage from './tools/TensorFlowPage'
+import OpenCVPage from './tools/OpenCVPage'
+import DockerPage from './tools/DockerPage'
+import LangChainPage from './tools/LangChainPage'
 
 interface ToolsDetailProps {
   data: {
@@ -28,6 +33,11 @@ const toolPages: Record<number, React.ComponentType> = {
   7: JavaScriptPage,
   8: ReactPage,
   9: AWSPage,
+  10: PyTorchPage,
+  11: TensorFlowPage,
+  12: OpenCVPage,
+  13: DockerPage,
+  14: LangChainPage,
 }
 
 const ToolsDetail = ({ data }: ToolsDetailProps) => {

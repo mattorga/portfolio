@@ -1,21 +1,16 @@
-# React + TypeScript + Vite
+# Web Portfolio Chatbot — Architecture Decisions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+| Layer | Choice | Why |
+| --- | --- | --- |
+| **Frontend** | React + Vite | Lightweight, no SSR needed, fast builds |
+| **Hosting** | AWS Amplify | Built-in CI/CD, easy static site deployment |
 
-While this project uses React, Vite supports many popular JS frameworks. [See all the supported frameworks](https://vitejs.dev/guide/#scaffolding-your-first-vite-project).
-
-## Deploy Your Own
-
-Deploy your own Vite project with Vercel.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/framework-boilerplates/vite-react&template=vite-react)
-
-_Live Example: https://vite-react-example.vercel.app_
-
-### Deploying From Your Terminal
-
-You can deploy your new Vite project with a single command from your terminal using [Vercel CLI](https://vercel.com/download):
-
-```shell
-$ vercel
-```
+# Todos
+| Layer | Choice | Why |
+| --- | --- | --- |
+| **AI Backend** | Lambda Function URL (streaming) | Native response streaming, stays in AWS ecosystem |
+| **LLM** | Amazon Bedrock | Foundation model access (Claude, etc.) |
+| **Resume Context** | System prompt or S3 | Resume in system prompt; S3 for dynamic |
+| **Rate Limiting** | IP-based via DynamoDB | Primary throttle per IP per day |
+| **Soft Limit** | Session-based (cookie) | UX-friendly message count for honest users |
+| **Budget Safety** | Global DynamoDB counter + CloudWatch alarm | Kill switch near $100 cap, billing alert as early warning |

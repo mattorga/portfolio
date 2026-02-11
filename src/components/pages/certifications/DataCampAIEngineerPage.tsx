@@ -1,16 +1,16 @@
-import { SiNvidia } from 'react-icons/si'
+import { SiDatacamp } from 'react-icons/si'
 
-const NVIDIALLMPage = () => {
+const DataCampAIEngineerPage = () => {
   return (
     <div className="space-y-6">
-      {/* Header with NVIDIA branding */}
+      {/* Header with DataCamp branding */}
       <div className="space-y-3">
         <div className="flex items-start gap-4">
-          <SiNvidia className="w-14 h-14 text-green-500 shrink-0" />
+          <SiDatacamp className="w-14 h-14 text-green-400 shrink-0" />
           <div className="flex-1">
-            <h3 className="text-2xl font-bold">Building LLM Applications</h3>
-            <p className="text-coral text-sm mt-1">NVIDIA Deep Learning Institute</p>
-            <p className="text-xs text-muted-foreground mt-1">Issued: 2024</p>
+            <h3 className="text-2xl font-bold">Associate AI Engineer for Developers</h3>
+            <p className="text-coral text-sm mt-1">DataCamp</p>
+            <p className="text-xs text-muted-foreground mt-1">In Progress · Started January 2025</p>
           </div>
         </div>
       </div>
@@ -18,12 +18,12 @@ const NVIDIALLMPage = () => {
       {/* Credential */}
       <div className="flex justify-center">
         <a
-          href="https://learn.nvidia.com/certificates?id=NAwU8vGgRm-VIKLcQtl2hQ"
+          href="https://www.datacamp.com/certificate/AIED0017029791772"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-4 py-2 text-xs font-medium text-accent border border-accent/30 rounded-full hover:bg-accent/10 hover:border-accent transition-all"
         >
-          View Credential on NVIDIA
+          View Progress on DataCamp
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
           </svg>
@@ -32,10 +32,11 @@ const NVIDIALLMPage = () => {
 
       {/* What this certification covers */}
       <div className="space-y-2">
-        <h4 className="text-base font-semibold text-accent">What I Learned</h4>
+        <h4 className="text-base font-semibold text-accent">What I'm Learning</h4>
         <p className="text-sm text-muted-foreground">
-          Hands-on course focused on building practical LLM applications using prompt
-          engineering techniques, RAG architecture, and best practices for production deployment.
+          A specialized engineering certification focused on integrating Large Language Models
+          and Generative AI into existing software applications, with emphasis on production-ready
+          AI systems and enterprise deployment patterns.
         </p>
       </div>
 
@@ -46,45 +47,48 @@ const NVIDIALLMPage = () => {
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
             <p className="text-xs font-medium mb-1">Prompt Engineering</p>
             <p className="text-xs text-muted-foreground">
-              Zero-shot, few-shot, and chain-of-thought prompting
+              Advanced prompting techniques for production LLM applications
             </p>
           </div>
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-xs font-medium mb-1">RAG Implementation</p>
+            <p className="text-xs font-medium mb-1">RAG Systems</p>
             <p className="text-xs text-muted-foreground">
-              Vector databases and embedding retrieval systems
+              Building Retrieval-Augmented Generation with vector databases
             </p>
           </div>
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-xs font-medium mb-1">LLM Fine-tuning</p>
+            <p className="text-xs font-medium mb-1">MLOps Lifecycle</p>
             <p className="text-xs text-muted-foreground">
-              Parameter-efficient techniques for domain adaptation
+              AI deployment, monitoring, and model lifecycle operations
             </p>
           </div>
           <div className="p-3 bg-accent/5 border-l-2 border-accent">
-            <p className="text-xs font-medium mb-1">Production Best Practices</p>
+            <p className="text-xs font-medium mb-1">LLM Integration</p>
             <p className="text-xs text-muted-foreground">
-              Cost optimization and safety guardrails
+              Integrating Generative AI into software applications
             </p>
           </div>
         </div>
       </div>
 
-      {/* Tools used */}
+      {/* Frameworks used */}
       <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Tools & Frameworks Used</h4>
+        <h4 className="text-sm font-semibold text-accent">Tools & Frameworks</h4>
         <div className="flex flex-wrap gap-2">
-          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+          <span className="px-2 py-1 bg-green-400/10 text-xs rounded border border-green-400/20">
             LangChain
           </span>
-          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
-            OpenAI API
+          <span className="px-2 py-1 bg-green-400/10 text-xs rounded border border-green-400/20">
+            Pinecone
           </span>
-          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+          <span className="px-2 py-1 bg-green-400/10 text-xs rounded border border-green-400/20">
             Vector DBs
           </span>
-          <span className="px-2 py-1 bg-green-500/10 text-xs rounded border border-green-500/20">
+          <span className="px-2 py-1 bg-green-400/10 text-xs rounded border border-green-400/20">
             Python
+          </span>
+          <span className="px-2 py-1 bg-green-400/10 text-xs rounded border border-green-400/20">
+            MLOps
           </span>
         </div>
       </div>
@@ -93,4 +97,4 @@ const NVIDIALLMPage = () => {
   )
 }
 
-export default NVIDIALLMPage
+export default DataCampAIEngineerPage

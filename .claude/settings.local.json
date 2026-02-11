@@ -5,7 +5,16 @@
       "Bash(cp:*)",
       "Bash(npm run build:*)",
       "Bash(npm install react-icons)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash(npx tsc:*)",
+      "Bash(git rm:*)",
+      "Bash(xargs -I {} sh -c 'file \"\"{}\"\" | grep -q CRLF && echo \"\"{}\"\"')",
+      "Bash(while read f)",
+      "Bash(do if git show \":$f\")",
+      "Bash(then echo \"$f\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(npx eslint:*)"
     ]
   }
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import goldThesisCertificate from '@/assets/gold_thesis_certificate.webp'
+import dlsuSeal from '@/assets/dlsu_seal.svg'
 
 const GoldThesisAwardPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -9,17 +10,28 @@ const GoldThesisAwardPage = () => {
       {/* Header with DLSU branding */}
       <div className="space-y-3">
         <div className="flex items-start gap-4">
-          <div className="p-3 bg-yellow-500/10 rounded-lg">
-            <div className="w-12 h-12 flex items-center justify-center text-3xl">
-              🏆
-            </div>
-          </div>
+          <img src={dlsuSeal} alt="DLSU Seal" className="w-14 h-14 shrink-0 object-contain" />
           <div className="flex-1">
             <h3 className="text-2xl font-bold">Gold Thesis Award</h3>
             <p className="text-coral text-sm mt-1">De La Salle University</p>
             <p className="text-xs text-muted-foreground mt-1">May 2024</p>
           </div>
         </div>
+      </div>
+
+      {/* Certificate Image */}
+      <div className="space-y-2">
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="block w-full cursor-zoom-in"
+        >
+          <img
+            src={goldThesisCertificate}
+            alt="Gold Thesis Award Certificate"
+            className="w-full rounded-lg border border-border hover:border-accent/50 transition-colors"
+          />
+        </button>
+        <p className="text-xs text-muted-foreground text-center">Click to enlarge</p>
       </div>
 
       {/* What this award represents */}
@@ -65,31 +77,21 @@ const GoldThesisAwardPage = () => {
             Python
           </span>
           <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
-            Machine Learning
+            JavaScript
           </span>
           <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
-            React
+            OpenCV
           </span>
           <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
-            Data Analysis
+            OpenPose
+          </span>
+          <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
+            Pose2Sim
+          </span>
+          <span className="px-2 py-1 bg-yellow-500/10 text-xs rounded border border-yellow-500/20">
+            OpenSim
           </span>
         </div>
-      </div>
-
-      {/* Certificate Image */}
-      <div className="space-y-2">
-        <h4 className="text-sm font-semibold text-accent">Certificate</h4>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="block w-full cursor-zoom-in"
-        >
-          <img
-            src={goldThesisCertificate}
-            alt="Gold Thesis Award Certificate"
-            className="w-full rounded-lg border border-border hover:border-accent/50 transition-colors"
-          />
-        </button>
-        <p className="text-xs text-muted-foreground text-center">Click to enlarge</p>
       </div>
 
       {/* Modal */}
