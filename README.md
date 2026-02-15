@@ -4,6 +4,7 @@
 | --- | --- | --- |
 | **Frontend** | React + Vite | Lightweight, no SSR needed, fast builds |
 | **Hosting** | AWS Amplify | Built-in CI/CD, easy static site deployment |
+| **Infrastructure** | AWS CDK (Python) | Programmatic IaC, type-safe, synthesizes to CloudFormation |
 
 # Todos
 | Layer | Choice | Why |
