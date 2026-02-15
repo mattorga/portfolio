@@ -1,17 +1,17 @@
-# Web Portfolio Chatbot — Architecture Decisions
+# Web Portfolio Chatbot — Architecture
 
-| Layer | Choice | Why |
+| Layer | Choice |
 | --- | --- | --- |
-| **Frontend** | React + Vite | Lightweight, no SSR needed, fast builds |
-| **Hosting** | AWS Amplify | Built-in CI/CD, easy static site deployment |
-| **Infrastructure** | AWS CDK (Python) | Programmatic IaC, type-safe, synthesizes to CloudFormation |
+| **Frontend** | React + Vite
+| **Hosting** | AWS Amplify
+| **Infrastructure** | AWS CDK (Python)
 
 # Todos
-| Layer | Choice | Why |
-| --- | --- | --- |
-| **AI Backend** | Lambda Function URL (streaming) | Native response streaming, stays in AWS ecosystem |
-| **LLM** | Amazon Bedrock | Foundation model access (Claude, etc.) |
-| **Resume Context** | System prompt or S3 | Resume in system prompt; S3 for dynamic |
-| **Rate Limiting** | IP-based via DynamoDB | Primary throttle per IP per day |
-| **Soft Limit** | Session-based (cookie) | UX-friendly message count for honest users |
-| **Budget Safety** | Global DynamoDB counter + CloudWatch alarm | Kill switch near $100 cap, billing alert as early warning |
+| Layer | Choice |
+| --- | --- |
+| **AI Backend** | Lambda Function URL (streaming) |
+| **LLM** | Amazon Bedrock |
+| **Resume Context** | System prompt or S3 |
+| **Rate Limiting** | IP-based via DynamoDB |
+| **Soft Limit** | Session-based (cookie) |
+| **Budget Safety** | Global DynamoDB counter + CloudWatch alarm |
