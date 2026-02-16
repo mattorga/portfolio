@@ -136,14 +136,12 @@ const App = () => {
                 <ResizableHandle />
                 <ResizablePanel defaultSize={35} minSize={20}>
                   <div className="flex flex-col h-full min-h-0">
-                    <div className="flex items-center justify-center border-t border-border">
-                      <button
-                        onClick={() => setIsChatOpen(false)}
-                        className="p-1 text-muted-foreground hover:text-foreground transition-colors"
-                      >
-                        <ChevronDown className="size-4" />
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => setIsChatOpen(false)}
+                      className="flex items-center justify-center border-t border-border p-1 w-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
+                    >
+                      <ChevronDown className="size-4" />
+                    </button>
                     <div className="flex-1 min-h-0">
                       <ChatPanel />
                     </div>
@@ -157,14 +155,12 @@ const App = () => {
                     <DetailView />
                   </div>
                 </div>
-                <div className="flex items-center justify-center border-t border-border">
-                  <button
-                    onClick={() => setIsChatOpen(true)}
-                    className="p-1 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <ChevronUp className="size-4" />
-                  </button>
-                </div>
+                <button
+                  onClick={() => setIsChatOpen(true)}
+                  className="flex items-center justify-center border-t border-border p-1 w-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors cursor-pointer"
+                >
+                  <ChevronUp className="size-4" />
+                </button>
               </>
             )}
           </main>
