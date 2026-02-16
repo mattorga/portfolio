@@ -3,10 +3,18 @@ import json
 import os
 import uvicorn
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://mattheworga.com", "http://localhost:5173"],
+    allow_methods=["POST"],
+    allow_headers=["Content-Type"],
+)
 
 MODELS = {
     "claude-haiku-4-5": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
