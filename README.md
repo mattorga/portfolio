@@ -2,7 +2,7 @@ Live website deployed
 - Amplify: https://main.d1b24qwx1v708v.amplifyapp.com/
 - Vercel (will be deprecated): https://mattheworga.vercel.app/
 
-# Web Portfolio Chatbot — Architecture
+# Web Portfolio with Chatbot — Architecture
 
 | Layer | Tech / Service |
 | --- | --- |
