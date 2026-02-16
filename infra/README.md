@@ -22,6 +22,11 @@ infra/
 ├── infra/
 │   ├── __init__.py
 │   └── infra_stack.py        # Main infrastructure stack
+├── lambda/
+│   └── chat/
+│       ├── main.py           # FastAPI app with streaming endpoint
+│       ├── Dockerfile         # Docker image with Lambda Web Adapter
+│       └── requirements.txt   # Python dependencies for the Lambda
 └── tests/
     └── unit/
         └── test_infra_stack.py   # Unit tests
@@ -30,6 +35,7 @@ infra/
 ## Prerequisites
 
 - Python 3.12+
+- Docker (for building Lambda container images)
 - AWS CLI configured with credentials
 - AWS CDK CLI (`npm install -g aws-cdk`)
 - CDK bootstrapped in target account/region
@@ -66,7 +72,17 @@ The main stack (`InfraStack`) is defined in `infra/infra_stack.py`.
 
 ### Current Resources
 
-The stack is in bootstrap phase and ready for resource additions.
+- **Lambda (Docker)**: Chat function using FastAPI + [Lambda Web Adapter](https://github.com/awslabs/aws-lambda-web-adapter) for response streaming
+- **Bedrock**: Invokes Claude Haiku 4.5 via `invoke_model_with_response_stream`
+- **Function URL**: Direct HTTPS endpoint with `RESPONSE_STREAM` invoke mode
+
+#### Chat Endpoint
+
+`POST /api/chat` with request body:
+```json
+{"prompt": "your prompt here"}
+```
+Returns a streaming `text/plain` response.
 
 ### Planned Resources
 
@@ -74,7 +90,6 @@ Based on the portfolio techstack (React + AWS Serverless + Amplify):
 
 - **S3**: Static asset storage
 - **CloudFront**: CDN distribution
-- **Lambda**: Serverless functions
 - **API Gateway**: REST/HTTP APIs
 - **DynamoDB**: NoSQL database (if needed)
 
