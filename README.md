@@ -1,14 +1,14 @@
+Live website deployed 
+- Amplify: https://main.d1b24qwx1v708v.amplifyapp.com/
+- Vercel (will be deprecated): https://mattheworga.vercel.app/
+
 # Web Portfolio Chatbot — Architecture
 
-| Layer | Choice |
+| Layer | Tech / Service |
 | --- | --- |
 | **Frontend** | React + Vite |
 | **Hosting** | AWS Amplify |
 | **Infrastructure** | AWS CDK (Python) |
-
-# Todos
-| Layer | Choice |
-| --- | --- |
 | **AI Backend** | Lambda Function URL (streaming) |
 | **LLM** | Amazon Bedrock |
 | **Resume Context** | System prompt or S3 |
