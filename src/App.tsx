@@ -8,6 +8,9 @@ import Certifications from "./components/sections/Certifications"
 import Contacts from "./components/sections/Contacts"
 import { SelectionProvider } from "./context/SelectionContext"
 import DetailView from "./components/ui/DetailView"
+import ChatPanel from "./components/chat/ChatPanel"
+import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "./components/ui/resizable"
+import { ChevronUp, ChevronDown } from "lucide-react"
 
 const App = () => {
   // Startup animation phases:
@@ -18,6 +21,7 @@ const App = () => {
 
   // Track which components are visible
   const [visibleComponents, setVisibleComponents] = useState<Set<string>>(new Set())
+  const [isChatOpen, setIsChatOpen] = useState(false)
 
   useEffect(() => {
     const timers: number[] = []
@@ -117,12 +121,52 @@ const App = () => {
           </aside>
 
           {/* Main Content Area - appears in the sequence */}
-          <main className={`relative border border-border ${
+          <main className={`border border-border flex flex-col ${
             visibleComponents.has('main') ? "visible-startup" : "hidden-startup"
           }`}>
-            <div className="absolute inset-0 overflow-hidden">
-              <DetailView />
-            </div>
+            {isChatOpen ? (
+              <ResizablePanelGroup direction="vertical">
+                <ResizablePanel defaultSize={65} minSize={30}>
+                  <div className="relative h-full">
+                    <div className="absolute inset-0 overflow-hidden">
+                      <DetailView />
+                    </div>
+                  </div>
+                </ResizablePanel>
+                <ResizableHandle />
+                <ResizablePanel defaultSize={35} minSize={20}>
+                  <div className="flex flex-col h-full min-h-0">
+                    <div className="flex items-center justify-center border-t border-border">
+                      <button
+                        onClick={() => setIsChatOpen(false)}
+                        className="p-1 text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        <ChevronDown className="size-4" />
+                      </button>
+                    </div>
+                    <div className="flex-1 min-h-0">
+                      <ChatPanel />
+                    </div>
+                  </div>
+                </ResizablePanel>
+              </ResizablePanelGroup>
+            ) : (
+              <>
+                <div className="flex-1 relative overflow-hidden">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <DetailView />
+                  </div>
+                </div>
+                <div className="flex items-center justify-center border-t border-border">
+                  <button
+                    onClick={() => setIsChatOpen(true)}
+                    className="p-1 text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <ChevronUp className="size-4" />
+                  </button>
+                </div>
+              </>
+            )}
           </main>
         </div>
       </div>
