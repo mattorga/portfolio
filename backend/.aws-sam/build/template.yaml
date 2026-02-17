@@ -1,0 +1,50 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'Streaming Bedrock Response with FastAPI on AWS Lambda
+
+  '
+Globals:
+  Function:
+    Timeout: 300
+Resources:
+  ChatFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Architectures:
+      - arm64
+      PackageType: Image
+      MemorySize: 512
+      Environment:
+        Variables:
+          AWS_LWA_INVOKE_MODE: RESPONSE_STREAM
+      FunctionUrlConfig:
+        AuthType: NONE
+        InvokeMode: RESPONSE_STREAM
+      Policies:
+      - Statement:
+        - Sid: BedrockInvokePolicy
+          Effect: Allow
+          Action:
+          - bedrock:InvokeModelWithResponseStream
+          - bedrock:ListFoundationModels
+          Resource: '*'
+      Tracing: Active
+      ImageUri: chatfunction:v1
+    Metadata:
+      DockerContext: /Users/mattheworga/Documents/dev/portfolio/backend/lambda/chat
+      DockerTag: v1
+      Dockerfile: Dockerfile
+      SamResourceId: ChatFunction
+Outputs:
+  ChatFunctionUrl:
+    Description: Function URL for Chat function
+    Value:
+      Fn::GetAtt:
+      - ChatFunctionUrl
+      - FunctionUrl
+  ChatFunction:
+    Description: Chat Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - ChatFunction
+      - Arn
