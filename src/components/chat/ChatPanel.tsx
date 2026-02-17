@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import ChatMessages, { type Message } from './ChatMessages'
 import ChatInput from './ChatInput'
+import { RotateCw } from 'lucide-react'
 
-const ChatPanel = () => {
-  const [messages, setMessages] = useState<Message[]>([])
+interface ChatPanelProps {
+  messages: Message[]
+  setMessages: React.Dispatch<React.SetStateAction<Message[]>>
+}
+
+const ChatPanel = ({ messages, setMessages }: ChatPanelProps) => {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleSubmit = async (content: string) => {
     const userMessage: Message = { role: 'user', content }
-    setMessages(prev => [...prev, userMessage])
+    const updatedMessages = [...messages, userMessage]
+    setMessages(updatedMessages)
     setIsLoading(true)
 
     try {
@@ -17,7 +23,9 @@ const ChatPanel = () => {
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ prompt: content }),
+          body: JSON.stringify({
+            messages: updatedMessages.map(({ role, content }) => ({ role, content })),
+          }),
         },
       )
 
@@ -49,8 +57,24 @@ const ChatPanel = () => {
     }
   }
 
+  const handleClear = () => {
+    if (!isLoading) {
+      setMessages([])
+    }
+  }
+
   return (
     <div className="flex flex-col h-full min-h-0 border-t border-border">
+      <div className="flex items-center justify-end px-4 pt-2">
+        <button
+          onClick={handleClear}
+          disabled={isLoading || messages.length === 0}
+          className="text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors cursor-pointer disabled:cursor-default"
+          title="Clear chat"
+        >
+          <RotateCw className="size-3" />
+        </button>
+      </div>
       <ChatMessages messages={messages} />
       <ChatInput onSubmit={handleSubmit} isLoading={isLoading} />
     </div>

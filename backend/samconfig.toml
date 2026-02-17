@@ -1,0 +1,14 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "sam-bedrock"
+resolve_s3 = true
+s3_prefix = "sam-bedrock"
+region = "ap-southeast-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = ["ChatFunction=288612232466.dkr.ecr.ap-southeast-1.amazonaws.com/sambedrockaf020664/chatfunctiondddd4012repo"]
+
+[default.global.parameters]
+region = "ap-southeast-1"

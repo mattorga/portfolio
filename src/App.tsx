@@ -9,6 +9,7 @@ import Contacts from "./components/sections/Contacts"
 import { SelectionProvider } from "./context/SelectionContext"
 import DetailView from "./components/ui/DetailView"
 import ChatPanel from "./components/chat/ChatPanel"
+import { type Message } from "./components/chat/ChatMessages"
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "./components/ui/resizable"
 import { ChevronUp, ChevronDown } from "lucide-react"
 
@@ -22,6 +23,7 @@ const App = () => {
   // Track which components are visible
   const [visibleComponents, setVisibleComponents] = useState<Set<string>>(new Set())
   const [isChatOpen, setIsChatOpen] = useState(false)
+  const [chatMessages, setChatMessages] = useState<Message[]>([])
 
   useEffect(() => {
     const timers: number[] = []
@@ -143,7 +145,7 @@ const App = () => {
                       <ChevronDown className="size-4" />
                     </button>
                     <div className="flex-1 min-h-0">
-                      <ChatPanel />
+                      <ChatPanel messages={chatMessages} setMessages={setChatMessages} />
                     </div>
                   </div>
                 </ResizablePanel>
