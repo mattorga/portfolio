@@ -229,7 +229,7 @@ const PortfolioLayout = () => {
   )
 
   return (
-    <div className={`h-screen text-foreground p-2 md:p-4 text-glow flex flex-col md:items-center md:justify-center transition-colors duration-700 ${
+    <div className={`h-dvh text-foreground p-2 md:p-4 text-glow flex flex-col md:items-center md:justify-center transition-colors duration-700 ${
       startupPhase >= 2 ? 'bg-background' : 'bg-black'
     }`}>
       {/* Mobile top bar */}
