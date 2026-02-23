@@ -50,7 +50,7 @@ const AboutDetail = () => {
       </div>
 
       {/* Navigation buttons to sections */}
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
         {sectionLinks.map((link) => (
           <button
             key={link.label}

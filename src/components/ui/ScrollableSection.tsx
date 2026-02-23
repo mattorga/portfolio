@@ -6,6 +6,7 @@ interface ScrollableSectionProps {
   currentPage?: number
   totalPages?: number
   isActive?: boolean
+  flexGrow?: boolean
 }
 
 const ScrollableSection = ({
@@ -13,7 +14,8 @@ const ScrollableSection = ({
   children,
   currentPage = 1,
   totalPages,
-  isActive = false
+  isActive = false,
+  flexGrow = false
 }: ScrollableSectionProps) => {
   // Only apply max-height and scrolling if there are more than 3 items
   const needsScroll = totalPages && totalPages > 3
@@ -55,14 +57,14 @@ const ScrollableSection = ({
   }, [needsScroll, updateFadeVisibility])
 
   return (
-    <fieldset className={`border p-3 space-y-2 relative transition-colors ${isActive ? 'border-[#6B9B9B]' : 'border-border'}`}>
+    <fieldset className={`border p-2 lg:p-3 space-y-1.5 lg:space-y-2 relative transition-colors ${isActive ? 'border-[#6B9B9B]' : 'border-border'} ${flexGrow && needsScroll ? 'flex-1 min-h-0 flex flex-col' : ''}`}>
       <legend className={`text-xs px-2 transition-colors ${isActive ? 'text-[#6B9B9B]' : 'text-muted-foreground'}`}>[{title}]</legend>
 
       {/* Scrollable container - shows 3 items at a time when needed */}
-      <div className="relative overflow-hidden -mx-2">
+      <div className={`relative overflow-hidden -mx-2 ${flexGrow && needsScroll ? 'flex-1 min-h-0' : ''}`}>
         <div
           ref={scrollRef}
-          className={`space-y-2 text-sm snap-y snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-2 ${needsScroll ? 'max-h-[108px] overflow-y-auto overflow-x-hidden' : ''}`}
+          className={`space-y-2 text-sm snap-y snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] px-2 ${needsScroll ? (flexGrow ? 'h-full overflow-y-auto overflow-x-hidden' : 'max-h-[clamp(3.5rem,12vh,108px)] overflow-y-auto overflow-x-hidden') : ''}`}
         >
           {children}
         </div>

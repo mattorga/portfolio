@@ -279,6 +279,30 @@
 }
 
 /* Reduced text glow intensity */
+/* Bot face animations */
+@keyframes bot-blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.1);
+  }
+}
+
+@keyframes bot-look {
+  0%, 40%, 75%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  65% {
+    transform: translateX(-2px);
+  }
+}
+
+
+
 @layer utilities {
   .text-glow {
     text-shadow: 0 0 1px currentColor, 0 0 2px currentColor;
@@ -305,5 +329,36 @@
   .visible-startup {
     opacity: 1;
     transition: opacity 0.3s ease-in;
+  }
+
+  /* Bot face utilities — eyes */
+  .bot-eye--idle {
+    animation: bot-blink 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 1px currentColor);
+  }
+  .bot-eye--alert {
+    filter: drop-shadow(0 0 3px currentColor) drop-shadow(0 0 6px currentColor);
+  }
+  .bot-eye--happy {
+    filter: drop-shadow(0 0 2px currentColor);
+  }
+
+  /* Bot face utilities — connecting line */
+  .bot-line--idle {
+    filter: drop-shadow(0 0 1px currentColor);
+  }
+  .bot-line--alert {
+    filter: drop-shadow(0 0 3px currentColor) drop-shadow(0 0 6px currentColor);
+  }
+  .bot-line--happy {
+    filter: drop-shadow(0 0 2px currentColor);
+  }
+
+  .bot-face--looking {
+    animation: bot-look 8s ease-in-out infinite;
+  }
+
+  .bot-button-glow:hover {
+    box-shadow: 0 0 8px var(--ring), 0 0 16px var(--ring);
   }
 }

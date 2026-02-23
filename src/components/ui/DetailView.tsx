@@ -57,9 +57,9 @@ const DetailView = () => {
   }, [])
 
   return (
-    <div className="h-full min-h-0 flex flex-col p-6">
+    <div className="h-full min-h-0 flex flex-col p-3 md:p-6">
       {/* Section Header */}
-      <div className="flex-shrink-0 mb-6">
+      <div className="flex-shrink-0 mb-3 md:mb-6">
         <h2 className="text-lg font-semibold text-accent">[{section}]</h2>
       </div>
 

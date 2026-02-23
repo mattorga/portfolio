@@ -40,7 +40,7 @@ const Certifications = () => {
     : 1
 
   return (
-    <ScrollableSection title="Certifications" currentPage={currentPage} totalPages={certifications.length} isActive={isActive}>
+    <ScrollableSection title="Certifications" currentPage={currentPage} totalPages={certifications.length} isActive={isActive} flexGrow>
       {certifications.map((cert) => {
         const isSelected = isActive && selectedItem?.data?.id === cert.id
 

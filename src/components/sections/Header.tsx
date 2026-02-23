@@ -24,10 +24,10 @@ const Header = ({ startupPhase }: HeaderProps) => {
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
     >
-      <h1 className={`text-[#FC9867] text-2xl leading-relaxed origin-left transition-[filter] duration-700 ${shouldShowGlow ? 'drop-shadow-[0_0_15px_rgba(252,152,103,0.9)]' : ''}`} style={{ fontFamily: "'Press Start 2P', monospace", transform: 'scaleX(1.5)' }}>
+      <h1 className={`text-[#FC9867] text-xl md:text-2xl leading-normal lg:leading-relaxed origin-left scale-x-[1.2] md:scale-x-[1.5] transition-[filter] duration-700 ${shouldShowGlow ? 'drop-shadow-[0_0_15px_rgba(252,152,103,0.9)]' : ''}`} style={{ fontFamily: "'Press Start 2P', monospace" }}>
         MATTHEW
       </h1>
-      <h1 className={`text-[#FC9867] text-2xl leading-relaxed origin-left transition-[filter] duration-700 ${shouldShowGlow ? 'drop-shadow-[0_0_15px_rgba(252,152,103,0.9)]' : ''}`} style={{ fontFamily: "'Press Start 2P', monospace", transform: 'scaleX(1.5)' }}>
+      <h1 className={`text-[#FC9867] text-xl md:text-2xl leading-normal lg:leading-relaxed origin-left scale-x-[1.2] md:scale-x-[1.5] transition-[filter] duration-700 ${shouldShowGlow ? 'drop-shadow-[0_0_15px_rgba(252,152,103,0.9)]' : ''}`} style={{ fontFamily: "'Press Start 2P', monospace" }}>
         ORGA
       </h1>
     </div>

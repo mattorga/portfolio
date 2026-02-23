@@ -47,7 +47,7 @@ const Projects = () => {
     : 1
 
   return (
-    <ScrollableSection title="Projects" currentPage={currentPage} totalPages={projects.length} isActive={isActive}>
+    <ScrollableSection title="Projects" currentPage={currentPage} totalPages={projects.length} isActive={isActive} flexGrow>
       {projects.map((project) => {
         const isSelected = isActive && selectedItem?.data?.id === project.id
 

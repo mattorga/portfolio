@@ -31,7 +31,7 @@ const Tools = () => {
     : 1
 
   return (
-    <ScrollableSection title="Tools" currentPage={currentPage} totalPages={tools.length} isActive={isActive}>
+    <ScrollableSection title="Tools" currentPage={currentPage} totalPages={tools.length} isActive={isActive} flexGrow>
       <div className="grid grid-cols-3 gap-x-2 gap-y-1.5 text-xs">
         {tools.map((tool) => {
           const Icon = tool.icon

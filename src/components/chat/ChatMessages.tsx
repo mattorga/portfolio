@@ -15,7 +15,7 @@ type ContentSegment =
   | { type: 'text'; value: string }
   | { type: 'audio'; songId: string }
 
-const AUDIO_REGEX = /\[AUDIO_PLAYER:([a-zA-Z0-9_-]+)\]/g
+const AUDIO_REGEX = /\[AUDIO_PLAYER:([a-zA-Z0-9_-]+)/g
 
 const SONG_MAP: Record<string, { src: string; title: string }> = {
   panaginip: { src: '/panaginip.mp3', title: 'Panaginip — Sinai' },
@@ -144,6 +144,11 @@ const ChatMessages = ({ messages }: ChatMessagesProps) => {
   return (
     <ScrollArea className="flex-1 min-h-0">
       <div className="p-4 space-y-2">
+        {messages.length === 0 && (
+          <div className="text-sm text-muted-foreground pl-4">
+            Hey 👋! I'm Matt's AI assistant. Ask me anything about his experience, projects, or skills.
+          </div>
+        )}
         {messages.map((msg, i) => (
           <div key={i} className="text-sm">
             {msg.role === 'user' ? (
