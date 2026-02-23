@@ -231,6 +231,13 @@
     overflow-x: hidden;
   }
 
+  @media (max-width: 767px) {
+    html, body {
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+
   /* Reduced scanline and vignette opacity for subtler CRT effect */
   body::before {
     content: "";
