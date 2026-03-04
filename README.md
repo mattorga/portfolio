@@ -10,7 +10,7 @@ Live website deployed
 | --- | --- |
 | **Frontend** | React + Vite |
 | **Hosting** | AWS Amplify |
-| **Infrastructure** | AWS CDK (Python) |
+| **Infrastructure** | AWS SAM |
 | **AI Backend** | Lambda Function URL (streaming) |
 | **LLM** | Amazon Bedrock |
 | **Resume Context** | System prompt or S3 |
