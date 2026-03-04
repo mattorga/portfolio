@@ -24,6 +24,11 @@ dist-ssr
 *.sw?
 
 CLAUDE.md
+MANIFEST.md
 .env
+.envrc
 .claude
+claude-harness
 documents
+docs
+scripts

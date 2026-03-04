@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
+    </style>
+  </defs>
+  <rect width="32" height="32" rx="0" fill="#2D2A2E"/>
+  <text x="16" y="24" text-anchor="middle" font-family="'Press Start 2P', monospace" font-size="18" fill="#FC9867">MO</text>
+</svg>
